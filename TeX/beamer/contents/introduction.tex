@@ -1,0 +1,149 @@
+\frame{\titlepage}
+
+\section{Preliminares}
+
+\begin{frame}
+\frametitle{\secname}
+
+En esta sección se explicará los detalles del tema del proyecto y su visión.
+
+\
+
+Esperamos que esta estructura se mejore considerablemente bajo la guía de nuestro mentor MSc. \emph{Clifford Orlando Torres Ponce}.
+\end{frame}
+
+\begin{frame}
+\frametitle{\secname}
+
+Si $f$ es una función de dos variables, a menudo dejamos que una letra como $z$ denote el valor de $f$ en el punto $\left(x,y\right)$, así $z=f\left(x,y\right)$.
+
+\
+
+Entonces, llamaremos a $x$ e $y$ las \alert{variables independientes}, o los \emph{argumentos} de $f$, mientras que $z$ es llamada la \alert{variable independiente}, porque el valor $z$, en general, depende de los valores $x$ e $y$.
+
+\
+
+El dominio de la función $f$ es entonces el conjunto de todos los posibles pares de variables independientes, mientras que su \emph{rango} es el conjunto de valores correspondientes de la variable dependientes.
+
+\
+
+En economía, $x$ e $y$ son llamadas las \alert{variables exógenas}, mientras que $z$ es la \alert{variable endógena}.
+\end{frame}
+
+\begin{frame}
+\frametitle{\secname}
+
+\begin{definition}[Función de Cobb-Douglas]
+Una función de dos variables que aparecen en muchos modelos económicos es
+
+\begin{equation}\label{eq:cobb-douglas}
+F\left(x,y\right)=Ax^{a}y^{b}
+\end{equation}
+donde $A$, $a$ y $b$ son constantes. Usualmente, uno asume que $F$ es definida solo para $x>0$ e $y>0$.
+\end{definition}
+
+A la función de la forma~\eqref{eq:cobb-douglas} es generalmente llamada la \emph{función de Coubb-Douglas}.
+
+Se usa con mayor frecuencia para describir ciertos procesos de producción. Entonces $x$ e $y$ son llamados \alert{factores de entrada}, mientras que $F\left(x,y\right)$ es el número de unidades producidas, o la \alert{salida}.
+
+En este caso $F$ es llamada la \emph{función de producción}.
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{\secname}
+
+\begin{example}[Función de Cobb-Douglas]
+Para la función $F$ dada en el ejemplo~\eqref{eq:cobb-douglas}, encuentre una expresión para $F\left(2x,2y\right)$ y para $F\left(tx,ty\right)$, donde $t$ es un número positivo arbitrario. Encuentre también una expresión para $F\left(x+h,y\right)-F\left(x,y\right)$. Dé interpretaciones económicas.
+\end{example}
+
+\begin{proofs}
+Encontramos que \[ F\left(2x,2y\right)=A{\left(2x\right)}^{a}{\left(2y\right)}^{b}=A2^{a}x^{a}2^{b}y^{b}=2^{a}2^{b}Ax^{a}y^{b}=2^{a+b}F\left(x,y\right). \] Cuando $F$ es una función de producción, esto muestra que a cada uno de los factores de entrada es duplicado, entonces la salida es $2^{a+b}$ veces más grande. Por ejemplo, si $a+b=1$, entonces duplicando ambos factores de producción implica la duplicación de la salida.
+
+En el caso general,
+\begin{equation}\label{eq:1}
+F\left(tx,ty\right)=A{\left(tx\right)}^{a}{\left(ty\right)}^{b}=At^{a}x^{a}t^{b}y^{b}=t^{a+b}F\left(x,y\right).\tag{*}
+\end{equation}
+\end{proofs}
+\end{frame}
+
+\begin{frame}
+\frametitle{\secname}
+\begin{proofs}[\proofname\ (Cont.)]
+Finalmente, vemos que
+
+\begin{equation}\label{eq:2}
+F\left(x+h,y\right)-F\left(x,y\right)=A{\left(x+y\right)}^{a}y^{b}-Ax^{a}y^{b}=Ay^{b}\left[{\left(x+h\right)}^{a}-x^{a}\right].\tag{**}
+\end{equation}
+
+Esto muestra el cambio en la salida cuando el primer factor de entrada es cambiado por $h$ unidades mientras que el otros factor es constante.
+
+Por ejemplo, suponga que $A=100$, $a=1/2$ y $b=1/4$, en cuyo caso $F\left(x,y\right)=100x^{1/2}y^{1/4}$. Si escogemos $x=16$, $y=16$ y $h=1$, la ecuación~\eqref{eq:2} implica que \[ F\left(16+1,16\right)-F\left(16,16\right)=100\cdot16^{1/4}\left[17^{1/2}-16^{1/2}\right]=100\cdot2\left[\sqrt{17}-4\right]\approx24.6. \]
+Además, si incrementamos la entrada del primer factor desde $16$ hasta $17$, manteniendo constando la entrada del segundo factor constante en $16$ unidades, entonces incrementamos la producción en alrededor $24.6$ unidades.
+\end{proofs}
+\end{frame}
+
+\begin{frame}%[allowdisplaybreaks]
+\frametitle{\secname}
+\begin{alert}{Observación}
+$F$ es una función homogénea de grado $a+b$.
+\end{alert}
+
+\
+
+\begin{theorem}[Euler]\label{thm:euler}
+Sea la función $f\colon\mathds{R}^{k}\rightarrow\mathds{C}$ totalmente diferenciable, positiva, homogénea de grado $\lambda\in\mathds{R}$. Esto último significa que $f\left(tx\right)=t^{\lambda}f\left(x\right)$ para todo $t\in\mathds{R}_{>0}$ y $x\in\mathds{R}^{k}$. Entonces, se aplica a todos los $x\in\mathds{R}^{k}$ \[ \lambda\cdot f\left(x\right)=\sum_{i=1}^{k}\frac{\partial f}{\partial x_{i}}\left(x\right)\cdot x_{i}=\frac{\partial f}{\partial x_{1}}\left(x\right)\cdot x_{1}+\cdots+\frac{\partial f}{\partial x_{k}}\left(x\right)\cdot x_{k}. \]
+\end{theorem}
+\end{frame}
+
+\begin{frame}
+\begin{corollary}[Aplicación a la economía]
+Sea $f\colon\mathds{R}^{k}_{\geq0}\rightarrow\mathds{R}$ la función de producción totalmente diferenciable con economía de escala constante de una compañía. Matemáticamente, esto significa que $f$ es positiva y homogénea de grado uno. Entonces, se sigue del teorema~\ref{thm:euler} \[ f\left(x\right)=\sum_{i=1}^{k}\frac{\partial f}{\partial x_{i}}\left(x\right)\cdot x_{i}=\frac{\partial f}{\partial x_{1}}\left(x\right)\cdot x_{1}+\cdots+\frac{\partial f}{\partial x_{k}}\left(x\right)\cdot x_{k}. \] Bajo el supuesto de una competencia perfecta en todos los mercados de factores, cada factor de producción  $x_{1},\ldots, x_{k}$ se convierte en el equilibrio de mercado $x^{\ast}\in\mathds{R}^{k}_{\geq0}$ pagado de acuerdo con su ingreso marginal. Esto significa que para cualquier $i=1,\ldots,k$, el factor de remuneración del $i$--ésimo factor de producción $\frac{\partial f}{\partial x^{\ast}_{i}}\left(x^{\ast}\right)$ equivalente. Esto implica que el compañía considerada es un equilibrio de mercado $x^{\ast}$ no puede obtener ganancias porque la producción completa $f\left(x^{\ast}\right)$ por la remuneración de los factores de producción, $\sum_{i=1}^{k}\frac{\partial f}{\partial x_{i}}\left(x^{\ast}\right)\cdot x^{\ast}_{i}$, se gasta.
+\end{corollary}
+\end{frame}
+
+\begin{frame}
+\begin{example}[Aplicación del teorema de Euler]
+Dada la función de producción Cobb-Douglas $f\colon\mathds{R}^{2}_{\geq0}\rightarrow\mathds{R}$, $\left(K,L\right)\mapsto\sqrt{KL}$, en el que $K$ y $L$ aquí representan los factores capital o trabajo. $f$ es obviamente diferenciable y homogénea de grado uno, dado que $f\left(\alpha K,\alpha L\right)=\alpha f\left(K,L\right)$ para todo $\alpha\in\mathds{R}_{>0}$. Según el teorema de Euler se sigue: \[ K\frac{\partial f}{\partial K}\left(K, L\right)\left(K,L\right)+L\frac{\partial f}{\partial L}\left(K,L\right)=K\cdot\frac{1}{2}\frac{\sqrt{L}}{\sqrt{K}}+L\cdot\frac{1}{2}\frac{\sqrt{K}}{\sqrt{L}}=\sqrt{KL}=f\left(K,L\right). \]
+\end{example}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{\secname}
+
+La función de producción \emph{Cobb-Douglas} es una forma funcional particular de la función de producción, ampliamente usada para representar la relación tecnológica entre las cantidades de dos o más entradas, particularmente el capital físico y el trabajo, y la cantidad de salida puedes ser reproducida por esas entradas. La forma \emph{Cobb-Douglas} fue desarrollado y probada contra evidencia estadística por Charles Cobb and Paul Douglas durante $1927--1947$.
+
+\begin{block}{Formulación}
+En su forma más estándar para la producción un único producto con dos factores, la función es \[ Y=AL^{\beta}K^{\alpha}, \] donde
+\begin{itemize}
+	\item $Y$ es la producción total (el valor real de todos los productos producidos en un año).
+	\item $L$ es la aportación laboral, el número total de horas-persona trabajas en un año,
+	\item $K$ es la aportación del capital, el valor real de toda la maquinaria, equipamiento y edificaciones.
+	\item $A$ es el factor de productividad total.
+	\item $\alpha$ y $\beta$ son las elasticidades de salida del capital y el trabajo respectivamente. Estos valores son constantes determinadas por la tecnología disponible.
+\end{itemize}
+La elasticidad del producto mide la capacidad de respuesta del producto a un cambio en los niveles de trabajo o capital utilizados en la producción, con todas las demás cosas constantes. Por ejemplo, si $\alpha=0,45$, un aumento del 1\% en el uso de capital conduciría a un aumento de aproximadamente el 0,45\% en la producción.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{\secname}
+
+La función puede mostrar tres casos básicos de rendimientos de escala:
+\begin{itemize}
+	\item Rendimientos de escala constantes si $\alpha+\beta=1$, $-Y$ aumenta en ese mismo cambio proporcional a medida que cambian las entradas $L$ y $K$.
+	\item Rendimientos de escala decrecientes si $\alpha+\beta<1$, $-Y$ aumenta en menos de ese cambio proporcional a medida que cambian las entradas $L$ y $K$.
+	\item Rendimientos de escala crecientes si $\alpha+\beta>1$, $-Y$ aumenta en más de ese cambio proporcional a medida que cambian las entradas $L$ y $K$.
+\end{itemize}
+
+En su forma generalizada, la función de Cobb-Douglas modela más de dos productos. La función de Cobb-Douglas puede ser escrita como:
+\begin{equation}
+f\left(x\right)=A\prod_{i=1}^{L}x_{i}^{\lambda_{i}},\quad x=\left(x_{1},\cdots,x_{L} \right),
+\end{equation}
+donde
+\begin{itemize}
+	\item $A$ es un parámetro de eficiencia.
+	\item $L$ es el número total de productos.
+	\item $x_{1},\ldots,x_{L}$ son cantidades de productos consumidos, producidos, etc. (no negativas).
+	\item $\lambda_{i}$ es un parámetro de elasticidad para el producto $i$.
+\end{itemize}
+\end{frame}

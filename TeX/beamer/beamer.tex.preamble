@@ -1,0 +1,59 @@
+\PassOptionsToPackage{svgnames}{xcolor}
+\documentclass[spanish,10pt,utf8,handout,xcolor=table,aspectratio=1610]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\usepackage[spanish]{babel}
+\spanishdatedel
+%\usepackage[lite]{mtpro2}
+\usepackage{amsmath,mathrsfs,amsfonts,amsthm}
+%\usepackage{minted}
+%\setminted[python]{tabsize=2}
+\usepackage{pythontex}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{multicol}
+
+\usepackage[backend=biber,style=numeric, defernumbers=true, sorting=ynt,maxbibnames=4,maxcitenames=4]{biblatex}
+\addbibresource{bibliography/reference.bib}
+\usepackage{textpos}
+\usepackage{mathtools}
+\usepackage{dsfont}
+
+\usetheme{metropolis}
+\usecolortheme{dolphin}
+\useinnertheme{rectangles}
+
+\usefonttheme[onlymath]{serif}
+
+\newcommand{\MVAt}{{\usefont{U}{mvs}{m}{n}\symbol{`@}}}
+
+\makeatletter
+\newenvironment<>{proofs}[1][\proofname]{%
+\par
+\def\insertproofname{#1\@addpunct{.}}%
+\usebeamertemplate{proof begin}#2}
+{\usebeamertemplate{proof end}}
+\makeatother
+
+\makeatletter
+\newenvironment<>{solutions}[1][\solutionname]{%
+\par
+\def\insertsolutionname{#1\@addpunct{.}}%
+\usebeamertemplate{solution begin}#2}
+{\usebeamertemplate{solution end}}
+\makeatother
+
+\title[Cobb-Douglas]{\Huge\sffamily Función de Cobb-Douglas}
+\subtitle{Ecuaciones en diferencias y análisis en escalas de tiempo}
+\author{
+		K.~Fernández Huidobro\thanks{Email:~\href{mailto:kfernandezh@uni.pe}{kfernandezh\MVAt uni.pe}}\and
+		A.~Berrospi Casano\thanks{Email:~\href{mailto:aaberrospic@uni.pe}{aaberrospic\MVAt uni.pe}}\and%abc-2199@hotmail.com
+		B.~Torres Ayalas\thanks{Email:~\href{mailto:btorresa@uni.pe}{btorresa\MVAt uni.pe}}\and
+		C.~Aznarán Laos\thanks{Email:~\href{mailto:caznaranl@uni.pe}{caznaranl\MVAt uni.pe}}
+}
+
+\institute[FC -- UNI]{%\inst{1}
+	\normalsize Facultad de Ciencias \and%\inst{2}
+	\large Universidad Nacional de Ingeniería
+}
+\date{\today}

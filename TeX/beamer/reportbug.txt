@@ -1,0 +1,73 @@
+~/Git_Projects/Python/Cobb-Douglas-Funktion/TeX/beamer(master*) » arara beamer                                                                           carlosal1015@Oromion
+  __ _ _ __ __ _ _ __ __ _ 
+ / _` | '__/ _` | '__/ _` |
+| (_| | | | (_| | | | (_| |
+ \__,_|_|  \__,_|_|  \__,_|
+
+Processing 'beamer.tex' (size: 8 KB, last modified: 09/10/2019
+17:53:48), please wait.
+
+**** COMPILER BUG! REPORT THIS IMMEDIATELY AT http://jira.codehaus.org/browse/MVEL
+Expression: @{
+    prefix = [];
+    if (isUnix()) {
+        prefix = [ 'rm', '-f' ];
+    }
+    else {
+        prefix = [ 'cmd', '/c', 'del' ];
+    }
+    if (extensions == '') {
+        if (getOriginalFile() == file) {
+            throwError('I cannot remove the main file reference.');
+        }
+        return getCommand(prefix, file);
+    }
+    else {
+        base = getBasename(file);
+        removals = [];
+        foreach(extension : extensions) {
+            if (base.concat('.').concat(extension) == getOriginalFile()) {
+                throwError('I cannot remove the main file reference.');
+            }
+            removals.add(getCommand(prefix, base.concat('.').concat(extension)));
+        }
+        return removals;
+    }
+}
+Exception in thread "main" java.lang.VerifyError: (class: ASMAccessorImpl_21035692371571029913900, method: getKnownEgressType signature: ()Ljava/lang/Class;) Illegal type in constant pool
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3138)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3343)
+	at java.base/java.lang.Class.getConstructor(Class.java:2152)
+	at org.mvel2.optimizers.impl.asm.ASMAccessorOptimizer._initializeAccessor(ASMAccessorOptimizer.java:753)
+	at org.mvel2.optimizers.impl.asm.ASMAccessorOptimizer.compileAccessor(ASMAccessorOptimizer.java:880)
+	at org.mvel2.optimizers.impl.asm.ASMAccessorOptimizer.optimizeAccessor(ASMAccessorOptimizer.java:268)
+	at org.mvel2.optimizers.dynamic.DynamicGetAccessor.optimize(DynamicGetAccessor.java:95)
+	at org.mvel2.optimizers.dynamic.DynamicGetAccessor.getValue(DynamicGetAccessor.java:65)
+	at org.mvel2.ast.ASTNode.getReducedValueAccelerated(ASTNode.java:108)
+	at org.mvel2.ast.BinaryOperation.getReducedValueAccelerated(BinaryOperation.java:117)
+	at org.mvel2.compiler.ExecutableAccessor.getValue(ExecutableAccessor.java:38)
+	at org.mvel2.ast.IfNode.getReducedValueAccelerated(IfNode.java:73)
+	at org.mvel2.MVELRuntime.execute(MVELRuntime.java:85)
+	at org.mvel2.compiler.CompiledExpression.getDirectValue(CompiledExpression.java:123)
+	at org.mvel2.compiler.CompiledExpression.getValue(CompiledExpression.java:119)
+	at org.mvel2.compiler.CompiledExpression.getValue(CompiledExpression.java:106)
+	at org.mvel2.ast.ForEachNode.getReducedValueAccelerated(ForEachNode.java:111)
+	at org.mvel2.MVELRuntime.execute(MVELRuntime.java:85)
+	at org.mvel2.compiler.CompiledExpression.getDirectValue(CompiledExpression.java:123)
+	at org.mvel2.compiler.CompiledExpression.getValue(CompiledExpression.java:119)
+	at org.mvel2.compiler.CompiledExpression.getValue(CompiledExpression.java:100)
+	at org.mvel2.ast.IfNode.getReducedValueAccelerated(IfNode.java:80)
+	at org.mvel2.MVELRuntime.execute(MVELRuntime.java:85)
+	at org.mvel2.compiler.CompiledExpression.getDirectValue(CompiledExpression.java:123)
+	at org.mvel2.compiler.CompiledExpression.getValue(CompiledExpression.java:119)
+	at org.mvel2.compiler.CompiledExpression.getValue(CompiledExpression.java:113)
+	at org.mvel2.MVEL.executeExpression(MVEL.java:929)
+	at org.mvel2.templates.res.CompiledTerminalExpressionNode.eval(CompiledTerminalExpressionNode.java:39)
+	at org.mvel2.templates.TemplateRuntime.execute(TemplateRuntime.java:285)
+	at org.mvel2.templates.TemplateRuntime.execute(TemplateRuntime.java:247)
+	at org.mvel2.templates.TemplateRuntime.execute(TemplateRuntime.java:255)
+	at org.mvel2.templates.TemplateRuntime.execute(TemplateRuntime.java:203)
+	at org.mvel2.templates.TemplateRuntime.eval(TemplateRuntime.java:91)
+	at com.github.cereda.arara.model.Interpreter.execute(Interpreter.java:155)
+	at com.github.cereda.arara.Arara.main(Arara.java:168)

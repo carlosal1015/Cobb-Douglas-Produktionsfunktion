@@ -1,0 +1,41 @@
+\subsection{Modelo de crecimiento de Solow}
+\begin{example}[Modelo de crecimiento de Solow]
+Este modelo de crecimiento neoclásico está basado en la ecuación diferencial
+\begin{equation}\label{eq:solowgrowth}
+\dot{k}=sf\left(k\right)-\lambda k
+\end{equation}
+Aquí la función desconocida $k=k(t)$ denota el capital por trabajador, $s>0$ denota la tasa constante de ahorro, $f$ es una función de producción (producto nacional por trabajador como una función del capital por trabajador), y $\lambda>0$ denota la tasa proporcional constante de crecimiento del número de trabajadores.
+\end{example}
+
+Note que~\eqref{eq:solowgrowth} es una ecuacion separable. Debido a que $f$ no se especifica, aún no podemos encontrar una solución explícita de la ecuación. Asuma que el diagrama de fase para la ecuación~\eqref{eq:solowgrowth} es como se muestra en la Fig.4. % TODO: Incluir figura 4.
+Luego, aquí un estado de equilibrio único con $k^{\ast}>0$. Esto es dado por:
+\begin{equation}
+sf\left(k^{\ast}\right)=\lambda k^{\ast}
+\end{equation}
+Por inspección de la Fig.4 vemos que $k^{\ast}$ es estable. Sin importar cuál ha sido el capital inicial por trabajador $k\left(0\right)$, $k\left(t\right)\rightarrow k^{\ast}$ cuando $t\rightarrow\infty$.
+
+% (pag. 212)
+%\caption{Diagrama de fase para~\eqref{eq:solowgrowth}, con condicion apropiada en $f$.}
+
+Este es ua modelo mas detallado que lleva a la ecuación ~\eqref{eq:solowgrowth}. Sea $X\left(t\right)$ que denota el ingreso nacional, $K\left(t\right)$ el capital, y
+$L\left(t\right)$ el número de trabajadores en un país en un tiempo $t$. Asuma que
+\begin{multicols}{3}
+\begin{itemize}
+	\item $X\left(t\right)=F\left(K(t),L(t)\right)$
+	\item $\dot{K}\left(t\right)=sX\left(t\right)$
+	\item $L\left(t\right)=L_{0}e^{\lambda t}$
+\end{itemize}
+\end{multicols}
+donde $F$ es una función de producción, y $s$ es la tasa de ahorro. Asuma que $F$ es homogénea de grado $1$, así que $F\left(K,L\right)=LF\left(K/L,1\right)$ para todo $K$ y $L$.
+Defina $k\left(t\right) =K\left(t\right)/L\left(t\right)=$ capital por trabajador, y $f\left(k\right)=F\left(k,1\right)=F\left(K/L,1\right)=F\left(K,L\right)/L=$ salida por trabajador. Luego,  $\dot{k}/k=\left(d/dt\right)\left(\ln k\right)=\left(d/dt\right)\left(\ln K-\ln L\right)$, y así
+\begin{equation}
+\frac{\dot{k}}{k}=\frac{\dot{K}}{K}-\dfrac{\dot{L}}{L}=\frac{sF\left(K,L\right)}{K}-\lambda=\frac{sLf\left(k\right)}{K}-\lambda=\frac{sf\left(k\right)}{k}-\lambda
+\end{equation}
+de la cual~\eqref{eq:solowgrowth} sigue a la vez.
+
+\begin{remark}
+	Déjenes discutir brevemente las condciones suficientes para la existencia y unicidad del equilibrio del modelo de Solow. Es usual asumir que $f\left(0\right)=0$, así como que $f^{\prime}\left(k\right)>0$ y $f^{\prime\prime}\left(k\right)<0$ para todo $k>0$. Esto es también común postular las llamadas \emph{condiciones de Inada}, de acuerdo con $f^{\prime}\left(k\right)\rightarrow\infty$ y también $f^{\prime}\left(k\right)\rightarrow0$ cuando $k\rightarrow\infty$.
+	
+	Para ver por qué estas condiciones son suficientes, defina $G\left(k\right)=sf\left(k\right)-\lambda k$. Entonces, $G^{\prime}\left(k\right)=sf^{\prime}\left(k\right)-\lambda$, y la ecuación~\eqref{eq:solowgrowth} cambia a $\dot{k}=G\left(k\right)$. Los supuestos sobre $f$ implica que $G\left(0\right)=0$, $G^{\prime}\left(k\right)\rightarrow\infty$ cuando $k\rightarrow0$, $G^{\prime}\left(k\right)\rightarrow-\lambda<0$ cuando $k\rightarrow\infty$, y $G^{\prime\prime}\left(k\right)=sf^{\prime\prime}\left(k\right)<0$ para todo $k>0$. Así $G$ tiene un único punto estacionario $\hat{k}>0$ en el cual $G^{\prime}\left(\hat{k}\right)=0$. Obviamente, $G\left(\hat{k}\right)>0$. Pero, $G^{\prime}\left(k\right)<-\frac{1}{2}\lambda<0$ para cualquier $k$ suficientemente grande. Se sigue que $G\left(k\right)\rightarrow-\infty$ cuando $k\rightarrow\infty$, así que existe un único punto $k^{\ast}>0$ con $G\left(k^{\ast}\right)=0$. Adicionalmente, $G^{\prime}\left(k^{\ast}\right)<0$. De acuerdo con % TODO
+	esta es una condición suficiente para la estabilidad local asintótica de $k^{\ast}$.
+\end{remark}

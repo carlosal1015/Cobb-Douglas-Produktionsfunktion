@@ -1,0 +1,172 @@
+\section{Introducción}
+Cualquier teoría depende de supuestos que no son del todo ciertos. Eso es lo que lo hace teoría. El arte de teorizar con éxito es hacer los supuestos simplificadores inevitables de tal manera que los resultados finales no sean muy sensibles. Una suposición ``crucial'' es una de las cuales las conclusiones dependen sensiblemente, y es importante
+que los supuestos cruciales sean razonablemente realistas. Cuando los resultados de una teoría parecen fluir específicamente de una suposición crucial especial, entonces, si la suposición es dudosa, los resultados son sospechosos.
+
+Deseo argumentar que algo así es cierto en el modelo de crecimiento económico Harrod--Domar. La característica y poderosa conclusión de la línea de pensamiento Harrod--Domar es que incluso para el largo plazo, el sistema económico está en el mejor de los casos equilibrado sobre el filo del cuchillo del equilibrio del crecimiento. ¿Eran las magnitudes de los parámetros clave --la relación de ahorro, la relación capital-producto, la tasa de aumento de la mano de obra--si se deslizara un poco desde el punto muerto, la consecuencia sería un desempleo creciente o una inflación prolongada. En términos de Harrod, la cuestión crítica del equilibrio se reduce a una comparación entre la tasa natural de crecimiento que depende, en la ausencia del cambio tecnológico, en el aumento de la fuerza laboral, y la tasa de crecimiento garantizada que depende de los hábitos de ahorro e inversión de los hogares y las empresas.
+
+Pero esta oposición fundamental de tasas garantizadas y naturales al final resulta que parte del supuesto crucial de que la producción tiene lugar en condiciones de \emph{proporciones fijas}. No hay posibilidad de sustituir mano de obra por capital en producción. Si esta suposición se abandona, la noción del filo de cuchillo de equilibrio inestable parece ir con eso. De hecho, no es sorprendente que una rigidez tan grave en una parte del sistema implique falta de flexibilidad en otro.
+
+Una característica notable del modelo Harrod--Domar es que estudia constantemente los problemas a largo plazo con las herramientas de corto plazo habitual. Normalmente se piensa en el largo plazo como el dominio del análisis neoclásico, la tierra del margen. En cambio Harrod y Domar hablan del largo plazo en términos del multiplicador, el acelerador, ``el'' coeficiente de capital. La mayor parte de este documento está dedicado a un modelo de crecimiento a largo plazo que acepta todos los supuestos de Harrod--Domar excepto el de proporciones fijas. En cambio supongo que la única mercancía compuesta es producida por trabajo y capital bajo las condiciones neoclásicas estándar. La adaptación del sistema a una tasa de incremento de la fuerza laboral dada de manera exógena se calcula en algún detalle, para ver si aparece la inestabilidad de Harrod. Las reacciones de interés precio-salario juegan un papel importante en este proceso de ajuste neoclásico, por lo que también se analizan. Luego, algunos de los otros rígidos supuestos se relajan ligeramente para ver qué cambios cualitativos resultan: se permite un cambio tecnológico neutral y un interés elástico horario de ahorro. Finalmente, las consecuencias de ciertas relaciones y rigideces más ``keynesianas'' son brevemente consideran.
+
+\section{Un modelo de crecimiento a largo plazo}
+Solo hay una mercancía, la producción como un todo, cuya tasa de producción se designa $Y\left(t\right)$. Así podemos hablar inequívocamente del ingreso real de la comunidad. Parte de cada salida instantánea es consumida y el resto se ahorra e invierte. La fracción de la salida ahorrada es una constante $s$, de modo que la tasa de ahorro es $sY\left(t\right)$. El stock de capital de la comunidad $K\left(t\right)$ toma la forma de una acumulación de la mercancía compuesta. La inversión neta es solo la tasa de
+aumento de este capital social $\mathrm{d}K/\mathrm{d}t$ o $\dot{K}$, por lo que tenemos la identidad básica en cada instante de tiempo:
+\begin{equation}\label{eq:first}
+\dot{K}=sY
+\end{equation}
+La salida es producida con la ayuda de dos factores de producción, capital y trabajo, cuya tasa de ingreso es $L\left(t\right)$. Las posibilidades tecnológicas son representadas por una función de producción.
+\begin{equation}\label{eq:second}
+Y=F\left(K,L\right)
+\end{equation}
+La salida es entendida como la salida neta después de hacer buena la depreciación del capital. Sobre la producción, todo lo que diremos en este momento es que muestra rendimientos constantes a escala. Por lo tanto, la función de producción es homogénea de primer grado. Esto equivale a asumir que no existe un recurso escaso no aumentable como la tierra. Retornos de escala constante parece la suposición natural para hacer en una teoría de crecimiento. El caso de tierras escasas conduciría a rendimientos decrecientes a
+escala en capital y trabajo y el modelo se volvería más Ricardiano.
+
+Insertando~\eqref{eq:second} en~\eqref{eq:first} obtenemos
+\begin{equation}\label{eq:third}
+\dot{K}=sF\left(K,L\right).
+\end{equation}
+Este es una ecuación con dos incógnitas. Una primera manera de acercarse al sistema sería agregar una ecuación de demanda de trabajo: la productividad física del trabajo marginal es igual a la tasa salarial real; y una ecuación de oferta de trabajo. Este último podría tomar la forma general de hacer trabajo proporcionar una función del salario real, o más clásico de poner el salario real igual a un nivel de subsistencia convencional. En cualquier caso serían tres ecuaciones en las tres incógnitas $K$, $L$, salario real.
+
+En cambio, procedemos más en el espíritu del modelo Harrod. Como un resultado exógeno del crecimiento de la población, la fuerza laboral aumenta a una tasa relativa constante $n$. En ausencia de cambio tecnológico, $n$ es la tasa natural de crecimiento de Harrod. Así:
+\begin{equation}\label{eq:fourth}
+L\left(t\right)=L_{0}e^{nt}
+\end{equation}
+En~\eqref{eq:third} $L$ representa el empleo total; en~\eqref{eq:fourth} $L$ representa la oferta de trabajo disponible. Al identificar los dos estamos asumiendo que el empleo se mantiene perpetuamente. Cuando insertamos~\eqref{eq:fourth} en~\eqref{eq:third} obtenemos
+\begin{equation}\label{eq:fifth}
+\dot{K}=sF\left(K,L_{0}e^{nt}\right)
+\end{equation}
+tenemos la ecuación básica que determina el camino temporal de la acumulación del capital que debe ser serguida si todas los trabajos disponibles están empleados.
+
+Alternativamente,~\eqref{eq:fourth} puede ser visto como una curva de oferta de mano de obra. Eso dice que la fuerza laboral que crece exponencialmente se ofrece para un empleo completamente inelástico. La curva de oferta de trabajo es una línea vertical que se mueve hacia la derecha en el tiempo a medida que la fuerza laboral crece de acuerdo
+para~\eqref{eq:fourth}. Luego, la tasa salarial real se ajusta para que toda la mano de obra disponible sea empleado, y la ecuación de productividad marginal determine la tasa salarial que realmente gobernará.
+
+En resumen,~\eqref{eq:fifth} es una ecuación diferencial con la única variable $K\left(t\right)$. Su solución da el único perfil de tiempo del capital social de la comunidad que empleará plenamente la mano de obra disponible. Una vez que nosotros conozca el camino temporal del stock de capital y el de la fuerza laboral, podemos calcular desde la función de producción la ruta de tiempo correspondiente de salida real. La ecuación de productividad marginal determina la trayectoria temporal del salario real. También hay una suposición involucrada de pleno empleo del stock de capital disponible. En cualquier punto de tiempo en que el stock de capital preexistente (el resultado de una acumulación previa) se suministra de manera inelástica. Por lo tanto, existe una ecuación de productividad marginal similar para el capital que determina el alquiler real por unidad de tiempo para los servicios de capital social. El proceso puede ser visto de esta manera: en cualquier momento la oferta laboral disponible está dado por~\eqref{eq:fourth} y el stock de capital disponible también es un dato. Ya que el rendimiento real de los factores se ajustará para lograr el pleno empleo de trabajo y capital podemos usar la función de producción~\eqref{eq:second} para encontrar la tasa actual de salida. Entonces la propensión a ahorrar nos dice cuánto de la producción neta se ahorrará e invertirá. Por eso conocemos la acumulación del capital neta durante el período actual. Agregado al stock ya acumulado, esto da el capital disponible para el próximo período, y todo el proceso puede repetirse.
+\section{Posibles patrones de crecimiento}
+Para ver si siempre existe una ruta de acumulación de capital consistente con cualquier tasa de crecimiento de la fuerza laboral, debemos estudiar la ecuación diferencial~\eqref{eq:fifth} por la naturaleza cualitativa de sus soluciones. Naturalmente sin especificar la forma exacta de la función de producción no podemos esperar encontrar la solución exacta. Pero ciertas propiedades amplias son sorprendentemente fáciles de aislar, incluso gráficamente.
+
+Para ello, introducimos una nueva variable $r=\frac{K}{L}$, la relación de capital al trabajo Por lo tanto, tenemos $K=rL=rL_{0}e^{nt}$. Diferenciando con respecto al tiempo que tenemos
+\begin{equation}
+\dot{K}=L_{0}e^{nt}r^{\prime}+nrL_{0}e^{nt}.
+\end{equation}
+Reemplazando esto en~\eqref{eq:fifth}: \[ \left(\dot{r}+nr\right)L_{0}e^{nt}=sF\left(K,L_{0}e^{nt}\right). \] Pero debido al retorno de escala constante podemos dividir ambas variales en $F$ por $L=L_{0}e^{nt}$, no obstante, multiplicamos $F$ por el mismo factor. Así \[ \left(\dot{r}+nr\right)L_{0}e^{nt}=sLe^{nt}F\left(\frac{K}{L_{0}e^{nt}},1\right) \] y dividiendo el factor común llegamos finalmente a
+\begin{equation}\label{eq:sixth}
+\dot{r}=sF\left(r,1\right)-nr.
+\end{equation}
+Aquí tenemos una ecuación diferencial que involucra solamente la relación capital-trabajo.
+
+Esta ecuación fundamental se puede alcanzar menos formalmente. Como $r=\frac{K}{L}$, la tasa de cambio relativa de $r$ es la diferencia entre las tasas relativas de cambio de $K$ y $L$. Eso es: \[ \frac{\dot{r}}{r}=\frac{\dot{K}}{K}-\frac{\dot{L}}{L}. \] Ahora primero que nada $\frac{\dot{L}}{L}=n$. En segundo lugar, $\dot{K}=sF\left(K,L\right)$. Haciendo estas substituciones: \[ \dot{r}=r\frac{sF\left(K,L\right)}{K}-nr. \] Ahora divida $L$ de $F$ como antes, note que que $\frac{L}{K}=\frac{1}{r}$ y obtenemos~\eqref{eq:sixth} nuevamente.
+
+La función $F\left(r,1\right)$ que aparece en~\eqref{eq:sixth} es fácil de interpretar. Esta es la curva del producto total cuando varían las cantidades $r$ de capital con una unidad de trabajo. Alternativamente, da salida por trabajador como una función de capital por trabajador. Así~\eqref{eq:sixth} establece que la tasa del cambio de la relación capital-trabajo es la diferencia de dos términos, uno representando el incremento de capital y uno el incremento de trabajo.
+
+Cuando $\dot{r}=0$, la relación capital-trabajo es una constante, y el capital existente debe expandirse al mismo ritmo que la fuerza laboral, es decir, $n$.
+
+(La tasa de crecimiento garantizada, garantizada por la tasa real apropiada de retorno al capital, es igual a la tasa natural.) En la Figura I, el rayo que pasa por el origen con pendiente $n$ representa la función $nr$. La otra curva es la función $sF\left(r,1\right)$. Aquí se dibuja para pasar por el origen y convexo hacia arriba: sin salida a menos que ambas entradas sean positivas, y la disminución de la productividad marginal del capital, como sería el caso, por ejemplo, con la función Cobb-Douglas. En el punto de intersección $nr=sF\left(r,1\right)$ y $\dot{r}=0$. Si la relación capital-trabajo $r^{\ast}$ debe establecerse, se mantendrá, y el capital y
+el trabajo crecerá de allí en adelante en proporción. Por la constante retornos a escala
+
+\newpage
+Formalmente, una función de producción se define para tener:
+\begin{itemize}
+	\item Constante retorno a escala si (para cualquier constante $a$ es mayor que $0$) $F\left(aK,aL\right)=aF\left(K,L\right)$ (Función $F$ es homogénea de grado $1$).
+	\item Retornos a escala crecientes si (para cualquier constante mayor que $1$) $F\left(aK,aL\right)>aF\left(K,L\right)$.
+	\item Retornos a escala decrecientes si (para cualquier constante $a$ mayor que $1$) $F\left(aK,aL\right)<aF\left(K,L\right)$.
+\end{itemize}
+donde $K$ y $L$ son factores de producción--capital y trabajo, respectivamente.
+
+En una configuración más general, para procesos de producción de múltiples entradas y múltiples salidas, se puede suponer que la tecnología se puede representar a través de algún conjunto de tecnología, llámelo $T$ que debe satisfacer algunas condiciones de regularidad de la teoría de la producción. En este caso, la propiedad de retorno de escala constante es equivalente a decir que el conjunto tecnológico es un cono, es decir, satisface la propiedad $aT=T$, $\forall a>0$. A su vez, si hay una función de producción que describirá el conjunto de tecnología $T$, deberá ser homogéneo de grado $1$.
+
+
+\begin{definition}[Rendimiento de escala]
+	La forma funcional de Cobb-Douglas tiene una constante retorno de escala cuando la suma de sus exponentes es $1$. En este caso, la función es
+	\begin{equation}
+	F\left(K,L\right)=AK^{b}L^{1-b}
+	\end{equation}
+	donde $A>0$ y $0<b<1$. Así \[ F\left(aK,aL\right)=A{\left(ak\right)}^{b}{\left(aL\right)}^{1-b}=Aa^{b}a^{1-b}K^{b}L^{1-b}=aAK^{b}L^{1-b}=aF\left(K,L\right). \] Aquí como entrada usamos todas las escalas por un factor multiplicador $a$, la salida también escala por $a$ y así existen constantes de retorno de escala.
+	
+	Pero, si la función de producción de Cobb-Douglas tiene su forma general
+	\begin{equation}
+	F\left(K,L\right)=AK^{b}L^{c}
+	\end{equation}
+	donde $0<b<1$ y $0<c<1$, entonces existen retornos crecientes si $b+c>1$, pero retornos decrecientes si $b+c<1$, dado que \[ F\left(aK,aL\right)=A{\left(aK\right)}^{b}{\left(aL\right)}^{c}=Aa^{b}a^{c}K^{b}L^{c}=a^{b+c}AK^{b}L^{c}=a^{b+c}F\left(K,L\right), \] que para $a>1$ es mayor que o menor que $aF\left(K,L\right)$ cuando $b+c$ es mayor o menor que uno.
+\end{definition}
+
+Hay dos clases especiales de funciones de producción que a menudo se analizan. La función de producción $Q=f\left(X_{1},X_{2},\ldots,X_{n}\right)$ se dice que es homogéneo de grado $m$, si se le da alguna constante positiva $k$, $f\left(kX_{1},kX_{2},\ldots,kX_{n}\right)=k^{m}f\left(X_{1},X_{2},\ldots, X_{n}\right)$. Si $m>1$, la función exhibe rendimientos crecientes a escala, y exhibe rendimientos decrecientes a escala si $m<1$. Si es homogéneo de grado $1$, exhibe rendimientos constantes a escala. La presencia de rendimientos crecientes significa que un aumento del uno por ciento en los niveles de uso de todas las entradas daría como resultado un aumento de más del uno por ciento en la producción; la presencia de rendimientos decrecientes significa que daría como resultado un aumento de producción de menos del uno por ciento. Los retornos constantes a escala son el caso intermedio. En la función de producción Cobb–Douglas mencionada anteriormente, los rendimientos a escala aumentan si $a_{1}+a_{2}+\cdots+a_{n}> 1$, disminuyendo si $a_{1}+a_{2}+\cdots+a_{n}<1$, y constante si $a_{1}+a_{2}+\cdots+a_{n}=1$.
+
+Si una función de producción es homogénea y de grado uno, este a veces llamada ``linealmente homogénea''. Una función de producción linealmente homogénea con entradas capital y labor tienen las propiedades de que los productos físicos marginales y promedio tanto del capital como del trabajo pueden expresarse solamente como funciones de la relación capital-trabajo. Además, en este caso, si cada entrada se paga a una tasa igual a su producto marginal, los ingresos de la empresa se agotarán exactamente y no habrá ganancias económicas excesivas.
+
+Las funciones homotéticas son funciones cuya tasa de sustitución técnica marginal (la pendiente de la isocuanta, una curva dibujada a través del conjunto de puntos en dicho espacio de trabajo-capital en el que se produce la misma cantidad de producción para combinaciones variables de las entradas) es homogénea de grado cero Debido a esto, a lo largo de los rayos que provienen del origen, las pendientes de las isocuantas serán las mismas. Las funciones homotéticas tienen la forma $F\left(h\left(X_{1},X_{2}\right)\right)$ donde $F(y)$ es una función monótona creciente (la derivada de $F\left(y\right)$ es positiva $\mathrm{d}F/\mathrm{d}y>0$, y la función $h\left(X_{1},X_{2}\right)$ es una función homogénea de cualquier grado.
+
+La elasticidad de sustitución constante (CES), en economía, es una propiedad de algunas funciones de producción y funciones de utilidad.
+
+Específicamente, este en un tipo particular de función agregado que combina dos o más tipos de productos de consumos, o dos o más tipos de entradas de producción dentro de un cantidad agregado. Esta función de agregación exhibe una elasticidad de sustitución constante.
+\begin{definition}[Elasticidad de sustitución constante]
+La función de producción CES es una función de producción neoclásica que muestra una elasticidad de sustitución constante. En otras palabras, la producción tecnológica tiene un porcentaje de cambio constante en factores (por ejemplo, trabajo y capital) proporcional debido al cambio porcentual en la tasa marginal de la sustitución técnica. Los dos factores (capital y trabajo) de la función de producción fue introducido por Solow y más tarde popularizado por Arrow, Chenery, Minhas y Solow es
+\begin{equation}
+Q=F\cdot{\left(a\cdot K^{\rho}+\left(1-a\right)\cdot L^{\rho}\right)}^{\frac{v}{\rho}}
+\end{equation}
+donde
+\begin{itemize}
+	\item $Q$ es la cantidad de salida,
+	\item $F$ es el factor de productividad,
+	\item $a$ es el parámetro forma,
+	\item $K,L$ son las cantidades de los factores de producción primario (capital y trabajo)
+	\item $\rho=\frac{\sigma-1}{\sigma}$ es el parámetro de sustitución,
+	\item $\sigma=\frac{1}{1-\rho}$ es elasticidad de sustituación,
+	\item $v$ es el grado de homogeneidad de la función de producción. Donde $v=1$ es el retorno de escala constante, $v<1$ es el retorno de escala decreciente y $v>1$ es el retorno de escala creciente.
+\end{itemize}
+Como su nombre lo sugiere, la función de producción CES exhibe una elasticidad de sustitución constante entre el capital y el trabajo. Leontief, linear y las funciones de Cobb-Douglas son casos especiales de la función de producción CES. Esto es,
+\begin{itemize}
+	\item Si $\rho$ se aproxima a $1$, tenemos una lineal o función de sustituto perfecto.
+	\item Si $\rho$ se aproxima a cero en el límite, obtenemos la función de producción de Cobb-Douglas.
+	\item Si $\rho$ se aproxima al menos infinito, obtenemos la Leontief o función de producción perfecta complementaria.
+\end{itemize}
+La forma general de la función de producción CES, con $n$ entradas, es
+\begin{equation}
+Q=F\cdot{\left[\sum_{i=1}^{n}a_{i}X^{r}_{i}\right]}^{\frac{1}{r}}
+\end{equation}
+donde
+\begin{itemize}
+	\item $Q$ es cantidad de salida
+	\item $F$ es el factor de productividad
+	\item $a_{i}$ es el parámetro forma de la entrada $i$, $\sum_{i=1}^{n}a_{i}=1$
+	\item $X_{i}$ son las cantidades de los factores de producción, $i=1,2,\ldots,n$.
+	\item $s=\frac{1}{1-r}$ es la elasticidad de sustitución.
+\end{itemize}
+\end{definition}
+Extendiendo la forma función CES (Solow) para acomodar los múltiples factores de producción crea algunos problemas. Sin embargo, no existe una forma completamente general para hacer esto. Uzawa mostró que solo $n$ factores posibles de la función de producción $n>2$ con elasticidades de sustitución parciales constantes requiere o todas las elasticidades entre pares de factores son idénticas, o si alguna difiere, todo ellos deben ser igual a cada otra y todas las elasticidades restantes deben ser unitarias. Esto es verdad para cualquier función de producción. Esto significa el uso de la forma funcional CES para más dos factores significará general que no existe una elasticidad de sustitución entre todos los factores.
+
+Las funciones CES anidades son comúnmente encontradas en los modelos de equilibrio parcial y equilibrio general. Diferentes anidamientos (niveles) permiten la introducción de las elasticidades de sustitución apropiadas.
+
+\begin{definition}[Función de utilidad CES]
+La misma forma funcional CES alcanza como una función de utilidad en la teoría del consumidor. Por ejemplo, si existen $n$ tipos de productos de consumos $x_{i}$, entonces el consumo agregado $X$ podría definirse usando el agregado CES:
+\begin{equation}
+X={\left[\sum_{i=1}^{n}a^{\frac{1}{s}}_{i}x^{\frac{s}{s-1}}_{i}\right]}^{\frac{s}{s-1}}
+\end{equation}
+Aquí nuevamente, los coeficientes $a_{i}$ son los parámetros forma y $s$ es la elasticidad de sustitución. Por lo tanto, los productos de consumo $x_{i}$ son perfectos sustitutos cuando $s$ se aproxima al infinito y complemento perfecto cuando $s$ se aproxima a cero. El agregado CES es también algunas veces llamado el \emph{agregador Armington}, el cual fue discutido por Armington (1969).
+
+Las funciones de utilidad CES son un caso especial de las preferencias homotéticas.
+
+El siguiente es un ejemplo de la función de utilidad CES para dos productos, $x$ e $y$ con igualdad compartidad:
+\begin{equation}
+u\left(x,y\right)={\left(x^{r}+y^{r}\right)}^{1/r}.
+\end{equation}
+La función expendidora en el caso es:
+\begin{equation}
+e\left(p_{x},p_{y},u\right)={\left(p^{r/\left(r-1\right)}_{x}+p^{r/\left(r-1\right)}_{y}\right)}^{\left(r-1\right)/r}\cdot u.
+\end{equation}
+La función de utilidad indirecta tiene su inversa:
+\begin{equation}
+v\left(p_{x},p_{y},I\right)={\left(p^{r/\left(r-1\right)}_{x}+p^{r/\left(r-1\right)}_{y}\right)}^{\left(1-r\right)/r}\cdot I.
+\end{equation}
+La funciones de demanda son:
+\begin{align*}
+x\left(p_{x},p_{y},I\right)
+&=\frac{p^{1/\left(r-1\right)}_{x}}{p^{r/\left(r-1\right)}_{x}+p^{r/\left(r-1\right)}_{y}}\cdot I\\
+y\left(p_{x},p_{y},I\right)
+&=\frac{p^{1/\left(r-1\right)}_{y}}{p^{r/\left(r-1\right)}_{x}+p^{r/\left(r-1\right)}_{y}}\cdot I\\
+\end{align*}
+La función de utilidad CES es uno de los casos considerados por Dixit y Stiglitz (1977) en su estudio de la diversidad del producto optimal en el contexto de la competición monopolística.
+
+Note que la diferencial entre la utilidad CES y la utilidad isoelástica: La función de utilidad CES es una función de utilidad ordinal que representa las preferencias sobre consumo seguro %TODO: Wikipedia https://en.wikipedia.org/wiki/Constant_elasticity_of_substitution
+mientras que la función de utilidad isoelástica es una función de utilidad cardinal que representa en loterías. Una función de utilidad CES indirecta (dual) ha sido usado para derivar la marca de consistencia-utildidad de sistemas donde la demanda categórica son determinadas endógenamente por un multicategorizador, la función de utilidad CES indirecto. Esto también se ha muestro que las preferencias son autoduales y ambos son primales y duales % TODO:
+podrían exhibir cualquier grado de convexidad.
+\end{definition}

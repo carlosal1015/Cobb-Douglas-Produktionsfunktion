@@ -1,0 +1,38 @@
+% arara: clean: {
+% arara: --> extensions:
+% arara: --> ['log','idx','ilg','ind','out','bbl','blg','thm','toc','aux','synctex.gz','bcf','run.xml','contb',
+% arara: --> 'contg','contn','diffb','diffg','diffn','funb','fung','funn','genb','geng','genn','intb','intg','pytxcode',
+% arara: --> 'intn','limb','limg','limn','logb','logg','logn','realb','realg','realn','seqb','seqg','seqn','ist',
+% arara: --> 'serb','serg','sern','setb','setg','setn','ssfunb','ssfung','ssfunn','topb','topg','topn','pdf']
+% arara: --> }
+% arara: lualatex: {
+% arara: --> shell: yes,
+% arara: --> draft: yes,
+% arara: --> }
+% arara: biber
+% arara: pythontex
+% arara: lualatex: {
+% arara: --> shell: yes,
+% arara: --> draft: yes,
+% arara: --> }
+% arara: lualatex: {
+% arara: --> shell: yes,
+% arara: --> synctex: yes,
+% arara: --> interaction: batchmode
+% arara: --> }
+% arara: clean: {
+% arara: --> extensions:
+% arara: --> ['log','idx','ilg','ind','out','bbl','blg','thm','toc','aux','bcf','run.xml','contb',
+% arara: --> 'contg','contn','diffb','diffg','diffn','funb','fung','funn','genb','geng','genn','intb','intg','pytxcode',
+% arara: --> 'intn','limb','limg','limn','logb','logg','logn','realb','realg','realn','seqb','seqg','seqn','ist',
+% arara: --> 'serb','serg','sern','setb','setg','setn','ssfunb','ssfung','ssfunn','topb','topg','topn','nav','snm']
+% arara: --> }
+% !arara This a comment, hence works %%. Non-working in OpenJDK 13 :)
+\input{beamer.tex.preamble}
+\begin{document}
+
+\include{./contents/introduction}
+\include{./contents/models}
+\include{./contents/references}
+
+\end{document}

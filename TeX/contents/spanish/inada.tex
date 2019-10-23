@@ -1,0 +1,273 @@
+La existencia y la estabilidad relativa de un único crecimiento balanceado para modelos multisectoriales fueron establecidos por Solow y Samuelson bajo el supuesto de \emph{retorno de escala constante}. Ellos estudiaron dos tipos de sistemas de ecuaciones: el sistema de ecuación en \emph{diferencias} y el sistema de ecuación diferencial. Later Muth y Suit estudiaron el sistema formado bajo el supuesto de retorno de escala decreciente. El primer objetivo de este artículo es estudiar algún sistema de ecuación diferencial bajo los supuestos más débiles que los impuestos por Solow y Samuelson, pero que retenga el supuesto de \emph{retorno constante} de escala. El segundo objetivo es investigar cierto sistema de ecuación diferencial bajo el supuesto de \emph{retorno de escala decreciente}.
+
+\subsection{Retorno de escala constante -- Caso general}
+Nuestro sistema es expresado por las siguientes ecuaciones:
+\begin{equation}
+\dot{X}_{i}=H^{i}\left(X_{1},\ldots,X_{n}\right),\quad\left(i=1,\ldots,n\right).
+\end{equation}
+El sistema de arriba es modelo de crecimiento balanceado de Solow--Samuelson. Los $H^i$'s son definidos para cualquier $\left(X_{1},\ldots,X_{n}\right)\geq0$ y son asumidos que son continuas con respecto a cualquier variable y positivamente homogénea de grado uno. A lo largo del artículo, los $X_{i}$'s son restringidos a valores no negativos. Además, las funciones son solo definidas para valores no negativos. Esto es asumido que
+\begin{equation}
+H^{i}\text{ es no decreciente en todas las variables, excepto en }X^{i},
+\end{equation}
+y que
+\begin{equation}
+\left\{H^{1},\ldots,H^{n}\right\}\text{ es indescomponible}.
+\end{equation}
+Aquí la indescomposibilidad es definido como en Morishima. Esto es, para cualquier conjunto de índices $R=\left\{i_{i},\ldots,i_{r}\right\}$, las relaciones $X_{i}=X^{\prime}_{i}$ para $i\in R$ y $X_{l}<X^{\prime}_{l}$ para $l\notin R$ implica que existe por lo menos un $i\in R$ tal que $H^{i}\left(X_{1},\ldots,X_{n}\right)<H^{i}\left(X^{\prime}_{i},\ldots,X^{\prime}_{n}\right)$. Requerimos que $H^{i}$ sea no decreciente en $X_{j}$, para $j\neq i$, sin la restricción sobre la dependencia de $H^{i}$ sobre $X_{i}$. En contraste del supuesto de Solow y Samuelson que $H^{i}$ es creciente en todos los $X_{j}$.
+
+Ddas sus supuestos y la homogeneidad de $H^{i}$ $\left(i=1,\ldots,n\right)$, este sigue que $H^{i}\geq0$ $(i=1,\ldots,n)$ para $X_{j}\geq0$ $(j=1,\ldots,n)$, y que, $H^{i}=0$  para todo $i$, si y solo si $X_{j}=0$ para todo $j$. En nuestro caso, sin embargo, $H^{i}$ no es necesariamente creciente en $X$. Por ello, no podemos obtener las propiedades mencionadas arriba. Así, asumimos ellos. Esto es, podemos asumir que
+\begin{equation}
+H^{i}\geq0\quad(i=1,\ldots,n)\text{ para }X_{j}\geq0\quad\left(j=1,\ldots,n\right).
+\end{equation}
+Entonces, de la indescomposabilidad y la homogeneidad de $H^{i}$, $H^{i}=0$ para todo $i$, si y solo si $X_{j}=0$ para todo $j$. Nuestro ánimo es probar el siguiente teorema.
+
+\begin{theorem}
+	Para el sistema de ecuaciones diferenciales, %TODO
+	existe un único determinado positivo autovalor, estrictamente un único positivo autovector normalizado y así un único camino de crecimiento balanceado. Más aún, cualquier solución del camino del sistema relativamente se aproxima al camino de crecimiento balanceado.
+\end{theorem}
+\begin{proof}
+Podemos mostrar por un procedimiento similar al de Solow y Samuelson sobre la existencia de un autovalor positivo $\lambda$ y un autovector no negativo, no nulo $V=\left(V_{1},V_{2},\ldots,V_{n}\right)$ tal que
+\begin{align*}
+\lambda V_{1}&=H^{1}\left(V_{1},\ldots,V_{n}\right),\\
+&=\vdots\\
+\lambda V_{n}&=H^{n}\left(V_{1},\ldots,V_{n}\right).
+\end{align*}
+Mostraremos que \emph{todas las componentes del autovector} $V$ \emph{son positivas}. Suponga que algunas componentes de $V$ son ceros. Sin pérdida de generalidad, podríamos suponer que \[ V_{i}=0\quad\text{para }i\leq r(<n), \] y \[ V_{i}>0\quad\text{ para }n\geq i>r. \] Entonces,
+\begin{align*}
+0&=H^{1}\left(0,\ldots0,V_{r+1},\ldots,V_{n}\right),\\
+&=\vdots
+0&=H^{r}\left(0,\ldots0,V_{r+1},\ldots,V_{n}\right),\\
+0<\lambda V_{r+1}&=H^{r+1}\left(0,\ldots0,V_{r+1},\ldots,V_{n}\right),\\
+&=\vdots
+0<\lambda V_{n}&=H^{n}\left(0,\ldots0,V_{r+1},\ldots,V_{n}\right).
+\end{align*}
+Pero esto contradice la suposición de indescomposabilidad, así es fácilmente visto haciendo
+\begin{align*}
+R\equiv\left\{1,\ldots,r\right\},\\
+\left(X_{1},\ldots,X_{r},X_{r+1},\ldots,X_{n}\right)
+&\equiv\left(0,\ldots0,V_{r+1},\ldots,V_{n}\right),\\
+\left(X^{\prime}_{1},\ldots,X^{\prime}_{r},X^{\prime}_{r+1},\ldots,X^{\prime}_{n}\right)
+&=\equiv\left(0,\ldots0,2V_{r+1},\ldots,2V_{n}\right).
+\end{align*}
+Ahora, mostraremos la unicidad del autovalor. Suponga que existe otra \emph{tupla}de un autor valor positivo y un autovector $\left(\mu, U\right)$. Entonces obtenemos los siguientes conjuntos de relaciones
+\begin{align}
+\lambda&=H^{1}\left(1,\frac{V_{2}}{V_{1}},\ldots,\frac{V_{n}}{V_{1}}\right),\\
+\lambda&=H^{2}\left(\frac{V_{1}}{V_{2}},1,\ldots,\frac{V_{n}}{V_{2}}\right),\\
+&=\vdots\\
+\lambda&=H^{n}\left(\frac{V_{1}}{V_{n}},\frac{V_{2}}{V_{n}},\ldots,1\right),\\
+\mu&=H^{1}\left(1,\frac{U_{1}}{U_{2}},\ldots,\frac{U_{n}}{U_{1}}\right),\\
+\mu&=H^{2}\left(\frac{U_{1}}{U_{n}},\frac{U_{2}}{U_{n}}\ldots,1\right).
+\end{align}
+Asuma que $\lambda>\mu$. Compare %TODO:.
+Entonces, \[ H^{1}\left(1,\frac{V_{2}}{V_{1}},\ldots,\frac{V_{n}}{V_{1}}\right)>H^{1}\left(1,\frac{U_{2}}{U_{1}},\ldots,\frac{U_{n}}{U_{1}}\right). \] Dado que $H^{1}$ es no decreciente en todos los argumentos, excepto en el primero, podemos reemplazar $i=2$. Esto es,
+\begin{equation}
+\frac{V_{2}}{V_{1}}>\frac{U_{2}}{U_{1}}.
+\end{equation}
+Compare %TODO:
+Entonces, \[ H^{2}\left(\frac{V_{1}}{V_{2}},1,\ldots,\frac{V_{n}}{V_{2}}\right)>H^{2}\left(\frac{U_{1}}{U_{2}},1,\ldots\frac{U_{n}}{U_{2}}\right). \] Dado que $V_{1}/V_{2}<U_{1}/U_{2}$, y $H^{2}$ es no decreciente en todos los argumentos, excepto en el segundo, debemos tener, digamos,
+\begin{equation}
+\frac{V_{3}}{V_{2}}>\frac{U_{3}}{U_{2}}.
+\end{equation}
+De %TODO:
+obtenemos $V_{1}/V_{3}<U_{1}/U_{3}$ y $V_{2}/V_{3}<U_{2}/U_{3}$. Continuando con este razonamiento, alcanzamos una contradicción para las últimas relaciones %TODO:
+
+Dado que los argumentos diagonales en el lado de derecho de ambos grupos de relaciones son todos uno, no necesitamos asumir que $H^{i}$ es creciente en $X^{i}$. El razonamiento de arriba ha sido alcanzado usado por Solow y Samuelson para mostrar la unicidad de los autovalores para el caso $n=2$. Pero ellos usan diferentes razonamientos para el caso general. En este razonamiento, ellos usan la propiedad que $H^{i}$ es creciente en $X_{j}$.
+
+Notamos también que el razonamiento de arriba es usado por Solow y Samuelson para mostrar la unicidad del vector normalizado y que el \emph{procedimiento es aplicable con un ligera modificación en nuestro caso también}. Así, podemos omitir la prueba de $V=\alpha U$. Aquí, $\alpha$ es una constante de proporcionalidad.
+
+Nuestro siguiente objetivo es \emph{mostrar que la estabilidad relativa del camino dinámico}.
+
+Definimos nuevas variables,
+\begin{equation}
+y_{i}=\frac{X_{i}}{V_{i}e^{\lambda t}},\quad\left(i=1,\ldots,n\right).
+\end{equation}
+Entonces, \[ y_{i}V_{i}e^{\lambda t}=X_{i}. \] Diferenciando ambos lados de esta relación, obtenemos
+\begin{equation}
+\dot{y}V_{i}e^{\lambda t}+\lambda y_{i}V_{i}e^{\lambda t}=\dot{X}_{i}\quad\left(i=1,\ldots,n\right).
+\end{equation}
+Sustituyendo las relaciones %TODO:
+dentro del sistema original, obtenemos
+\begin{equation}
+\dot{y}_{i}=H^{i}\left(\frac{V_{1}}{V_{i}}y_{1},\ldots,\frac{V_{n}}{V_{i}}y_{n}\right)-\lambda y_{i},\quad\left(i=1,\ldots,n\right).
+\end{equation}
+Ponga \[ \min\left\{y_{i}\left(t\right)\right\}=m\left(t\right)=y_{k_{1}}\left(t\right)=\cdots=y_{k_{r}}\left(t\right), \] y suponga que \[ y_{\ell}\left(t\right)>m\left(t\right)\quad\text{para }\ell\neq k_{j}. \] Entonces, \[ \dot{y}_{k_{j}}\left(t\right)\geq0\quad\text{ para todo }j\leq r \] y \[ \dot{y}_{k_{j}}\left(t\right)>0\quad\text{ para al menos un }j\leq r. \] Esto es mostrado como sigue.
+\begin{align*}
+\dot{y}_{k_{j}}
+&=H^{k_{j}}\left(\frac{V_{1}}{V_{k_{j}}}y_{1},\ldots,\frac{V_{n}}{V_{k_{j}}}y_{n}\right)-\lambda y_{k_{j}}\\
+&\geq H^{k_{j}}\left(\frac{V_{1}}{V_{k_{j}}}m\left(t\right),\ldots,\frac{V_{n}}{V_{k_{j}}}m\left(t\right)\right)-\lambda m\left(t\right)\\
+&=m\left(t\right) H^{k_{j}}\left(\frac{V_{1}}{V_{k_{j}}},\ldots,\frac{V_{n}}{V_{k_{j}}}\right)-\lambda m\left(t\right)=0,\quad\text{ para }j=1,\ldots,r.
+\end{align*}
+Pero la desigualdad se mantiene para al menos un $k_{j}$. Esto sigue de la suposición de indescomposibilidad si ponemos
+\begin{align*}
+R&\equiv\left\{k_{1},\ldots,k_{r}\right\}\\
+\left(X_{1},\ldots X_{n}\right)
+&=\left(V_{1}m\left(t\right),\ldots,V_{n}m\left(t\right)\right)
+\shortintertext{y}
+\left(X^{\prime}_{1},\ldots,X^{\prime}_{n}\right)
+&=\left(V_{1}y_{1},\ldots,V_{n}y_{n}\right).
+\end{align*}
+Con esta propiedad, inferimos que el mínimo valor de $y_{i}\left(t\right)$ no puede mantenerse constante por siempre. Para, cada momento de tiempo, el número de mínimos $y_{k}\left(t\right)$0s es decreciente. Eventualmente, existe solo un mínimo $y_{k}\left(t\right)$. %TODO: Henceforth
+Por ello, el mismo mínimo debe incrementar. Dado que el lapso de tiempo continuamente en nuestro caso, $m\left(t\right)$ siempre incrementa sobre el tiempo, provisto que $y_{\ell}\left(t\right)>m\left(t\right)$ para al menos un $\ell$. Esto es posible que \[ \frac{dm\left(t\right)}{dt}=0, \] en un cierto punto. Pero $m\left(t\right)$ se mantiene constante solo por un corto periodo infinitesimal. Eso no hace el residuo estacionario para un periodo finito. La figura 1 muestra la situación. Ponga \[ \max_{i}\left\{y_{i}\left(t\right)\right\}=M\left(t\right). \] Entonces, podemos mostrar que $M\left(t\right)$ decrece, provisto por $Y_{\ell}\left(t\right)<M\left(t\right)$ para al menos un $\ell$.
+
+Así, $m\left(t\right)$ incrementa y converge a un cierto valor positivo $m^{\ast}$ y $M\left(t\right)$ decrece y converge a cierto valor positivo $M^{\ast}$. Esto es,
+\begin{align*}
+\lim_{t\to\infty}m\left(t\right)
+&=m^{\ast}.\\
+\lim_{t\to\infty}M\left(t\right)
+&=M^{\ast}.
+\end{align*}
+Entonces,
+\[ m^{\ast}\leq M^{\ast}. \] Tenemos que probar que \[ m^{\ast}=M^{\ast}. \] Suponga que $m^{\ast}<M^{\ast}$. Considere un conjunto de vectores en el espacio $n$--dimensional que \[ S\equiv\left\{y\equiv\left(y_{1},\ldots,y_{n}\right)\right\}:\min_{i}y_{i}=m^{\ast}\text{ y }\max_{i}y_{i}=M^{\ast}. \] Este es un conjunto compacto. Considere un camino dinámico que empieza de un punto en este conjunto. Entonces, por el mismo razonamiento de arriba, el mínimo valor de los $y_{i}$'s incrementa y el máximo valor de los $y_{i}$'s decrece. Para hacer explícito esa dependencia en el valor inicial de $y$ en $S$, escribimos, respectivamente, \[ m^{\ast}\left(t;y\right)\text{ y }M^{\ast}\left(t,y\right). \] Luego, \[ m^{\ast}\left(\tau,y\right)>m^{\ast}\left(0,y\right)=m^{\ast}\text{ y }M^{\ast}\left(\tau, y\right)<M^{\ast}\left(0,y\right)=M^{\ast}. \] Aquí, $\tau$ es un valor positivo arbitrariamente escogido. Pero,
+\begin{align*}
+\inf_{y\in S}\left\{m^{\ast}\left(\tau,y\right)-m^{\ast}\left(0,y\right)\right\}
+&=\varepsilon
+\shortintertext{y}
+\inf_{y\in S}\left\{M^{\ast}\left(0,y\right)-M^{\ast}\left(\tau,y\right)\right\}
+&=\delta.
+\end{align*}
+Dado que $S$ es compacto, tanto $\varepsilon$ como $\delta$ son positivos.
+
+Ahora, volvamos al camino dinámico original. Como se muestra arriba, el $\min_{i} y_{i}\left(t\right)=m\left(t\right)$ y el $\max_{i}y_{i}\left(t\right)=M\left(t\right)$, respectivamente, son suficientemente cercanas a $m^{\ast}$ y $M^{\ast}$ para cualquier $t\geq T$, provisto $T$ es tomado suficientemente grande. Entonces, cualquier punto en el camino dinámico es suficientemente cercano al punto en $S$. De la continuidad de los $H^{i}$'s.
+\begin{align*}
+m\left(t+\tau\right)-m\left(t\right)>\frac{\varepsilon}{2}
+&>0
+\shortintertext{y}
+M\left(t\right)-M\left(t+\tau\right)>\frac{\delta}{2}
+&>0
+\end{align*}
+para $t\geq T$, provisto $T$ es suficientemente grande. Pero esto contradice \[ \lim_{t\to\infty}m\left(t\right)=m^{\ast}\quad\text{y}\quad\lim_{t\to\infty}M\left(t\right)=M^{\ast}. \] Por lo tanto, \[ m^{\ast}=M^{\ast}. \] Este es el resultado deseado. Esto es notado aquí que todos los componentes del punto inicial $X\left(0\right)$ son no negativos y por lo menos uno de ellos es positivo, entonces esta propiedad se mantiene para cualquier punto $X\left(t\right)$ para todo $t\geq0$.
+
+También es notado aquí que el razonamiento desarrollado arriba no es válido para el sistema de ecuaciones en diferencias \[ X_{i}\left(t+1\right)=H^{i}\left(X_{1}\left(t\right),\ldots,X_{n}\left(t\right)\right),\quad\left(i=1,\ldots,n\right). \] Esto es, si $H^{i}$ es creciente en $X_{i}$, podemos construir un ejemplo en el cual el sistema de ecuación en diferencia es inestable. Morishima tiene mostrado la estabilidad relativa del sistema de ecuación en diferencia bajo el supuesto que $H^{i}$'s son no decrecientes en todos los $X_{j}$'s y $\left(H^{1},\ldots,H^{n}\right)$ es indescomponible y primitivo, es decir, el supuesto de decrecentabilidad del $H^{i}$ en $X^{i}$ y la primitivdad son adcionalmente requeridas.
+
+La estabilidad es mostrada como nuestro incluso sin la suposición de la primitividad. La indescomposibilidad es suficiente. Pero, aquí nuevamente la estabilidad no es obtenida para el sistema de ecuación en diferencia sin el supuesto de primitiidad, esto es, podemos contruir un ejemplo en el cual la inestabilidad es mostrada con la indescomposibilidad pero sin la primitividad. Resumiendo los resultados, la estabilidad es mostrada para el sistema de ecuación diferencial sin los supuestos de no decresabilidad del $H^{i}$ en $X^{i}$ y la primitivdad.
+
+La razón por qué podemos relajar estos supuestos para el sistema de ecuación diferencial, pero no para el sistema de ecuación en diferencias será explicado en la siguiente sección.
+\end{proof}
+
+\section{Retorno de escala constante -- Caso matricial}
+
+Nuestro sistema en el caso es
+\begin{equation}
+\dot{X}=AX.
+\end{equation}
+Aquí, $X$ es un vector cuyas componentes son los $X_{i}$'s. $A$ es una matriz indescomponible del cual los elementos de su diagonal son asumidos todos no negativos. Esto es, $A$ es una matriz Metzler %TODO: Buscar qué significa eso.
+El siguiente teorma es provisto en esta sección.
+
+\begin{theorem}
+Para el sistema de ecuación diferencial%TODO: 
+bajo la suposición que todos los elementos de su diagonal de $A$ son no negativos, y $A$ es indescomponible, existe un único camino del crecimiento balanceado o decaimiento, y cualquier camino solución se aproxima relativamente a este.
+
+Note que el tasa de ``crecimiento'' puede ser negativo.
+
+\begin{proof}
+	Sea $\alpha$ un número positivo que es mayor que el valor absoluto de cualquier elemento de la diagonal de la matriz $A$. Ponga \[ B\equiv A+\alpha I. \] Aquí, $I$ es la matriz identidad. Entonces, todos los elementos de $B$ son negativos y $B$ es indescomponible. Entonces, $B$ tiene un único autovalor positivo $\mu_{1}$ y un único autovector positivo $\overline{X}^{(1)}$ associado con este tal que $\mu_{1}$ no es mayor que los valores absolutos de otros autovalores $\mu_{i}$'s $(i=2,\ldots,n)$ de la matriz $B$. Ahora, es fácilmente ver que el $\mu_{i}-\alpha(\equiv\lambda_{i})$ son autovalores de $A$. Para
+	\begin{align*}
+	\mu_{i}{\overline{X}}^{(i)}&=B{\overline{X}}^{(i)}=\left(A+\alpha I\right){\overline{X}}^{(i)},
+	\shortintertext{y además}
+	\lambda_{i}{\overline{X}}^{(i)}&=\left(\mu_{i}-\alpha\right){\overline{X}}^{(i)}=A{\overline{X}}^{(i)}.
+	\end{align*}
+	Aquí, $\overline{X}^{(i)}$ es el autovector asociado con $\mu_{i}$ y $\overline{X}^{(i)}\not>0$ para $i\neq1$. De arriba, notams que $\overline{X}^{(i)}$ es un autovector asociado con $\lambda_{i}$, y que $A$ tiene un único autovector positivo normalizado $\overline{X}^{(i)}$. La solución de % TODO:
+	es escrito explícitamente en la siguiente manera:
+	\begin{equation}
+	X\left(t\right)=\sum_{i=1}^{n}c_{i}\overline{X}^{(i)}e^{\lambda_{i}t}.
+	\end{equation}
+	(Aquí, este es asumido que cualquier autovalor de una matriz $A$ tiene un única raíz de la ecuación característica \[ \left|A-\lambda I\right|=0, \] pero esta suposición no es esencial para la siguiente discusión). Ahora considere los autovalores de $A+\alpha I$. El valor absoluto de $\mu_{i}$ atrae un máximo cuando $i=1$. Volviendo a llamar $\mu_{1}$ es simple, real y positivo, vemos que la parte real de $\mu_{i}$ también atrae un máximo cuando y solo cuando $i=1$. Dado \[ \lambda_{i}=\mu_{i}-\alpha,\quad\left(i=1,\ldots,n\right) \] vemos que la parte real de $\lambda_{i}$ también atrae un máximo cuando y solo cuando $i=1$. Entonces, denotamos de la expresión % TODO:
+	que la solución de %TODO:
+	es dominada por el primer término $c_{1}\underline{X}^{(1)}e^{\lambda_{1}t}$ en la sumatoria cuando $t\to\infty$. Dado que $\overline{X}^{(1)}$ es estrictamente positiva, la estabilidad relativa del camino del crecimiento balanceado $c_{1}\overline{X}^{(1)}e^{\lambda_{1}t}$ es probado.
+	
+	Sin embargo tenemos que mostrar que los valores de los $X_{i}\left(t\right)$'s se mantienen no negativos provisto las condiciones iniciales de los $X_{i}\left(t\right)$'s escogidos así. Esto es fácilmente visto como sigue. Suponga que $X_{1}\left(t\right)=0$. Entonces
+	\begin{align*}
+	\dot{X}_{1}\left(t\right)
+	&=a_{11}X_{1}\left(t\right)+a_{12}X_{2}\left(t\right)+\cdots+a_{1n}X_{n}\left(t\right)\\
+	&=a_{12}X_{2}\left(t\right)+\cdots+a_{1n}X_{n}\left(t\right)\geq0.
+	\end{align*}
+	Por lo tanto, la solución del sistema no va en una región con un significado económico donde algunas componentes de $X$ son negativas. El teorema está probado.
+\end{proof}
+
+Este es almenos el mismo procedimiento como se usó para mostrar el ítem %TODO:
+es absolutamente (no relativamente) estable si y solo si el autovalor de la matriz de Metzler con la mayor parte real es negativa. En este sentido, nuestro teorema es solo una extensión trivial de esta propiedad. Citamos el teorema, sin embargo, para explicar el por qué del modelo empleado para probar este teorema no es aplicable al sistema de ecuación en diferencia. Esto es, el sistema \[ X\left(t+1\right)=AX\left(t\right) \] no es necesariamente relativamente estable si $A$ es una matriz de Metzler.
+\end{theorem}
+Los valores absolutos de los autovalores son relevantes para la estabilidad del caso ecuación diferencial. En el procedimiento hemos seguido %TODO:
+los autovalores de $A+\alpha I$ para %TODO:
+Tan pronto como la parte real es conocida, la posición relativa de los autovalores son mantenidos iguales. Pero, por supuesto el valor absoluto hace cambios. Esto explica por qué la relajación del supuesto de no negatividad de los elementos de la diagonal de $A$ es posible para el sistema de ecuación diferencial, pero no para el sistema de ecuación en diferencia. El caso no matricial discutivo en la sección precedente también refleja este hecho.
+
+La razón porqué el supuesto de la primitiva es necesario en el caso del sistema de ecuación en diferencia, pero no en el caso del sistema de ecuación diferencial es el mismo. Esto es, los valores absolutos de los autovalores son relevantes para la estabilidad en el caso formado, donde sus partes reales son relevantes para la estabilidad en el último caso.
+
+\section{Retornos de escala descrecientes}
+En esta sección, estudiamos el siguiente sistema
+\begin{equation}
+\dot{X}_{i}=H^{i}\left(X_{1},\ldots,X_{n}\right)\equiv F^{i}\left(X_{1},\ldots,X_{n}\right)-\delta_{i}X_{i},\quad\left(i=1,\ldots,n\right).
+\end{equation}
+Aquí, $F^{i}$ es, por ejemplo, la salida %TODO:
+del bien capital del tipo $i$, y $\delta_{i}$ es la tasa de depreciación instantánea del bien capital del tipo $i$. Asumamos que todos los $F^{i}$0s son estrictamente positivo para cualquier $X$ estrictamente positivo, diferenciable con respecto a cualquier variable y positivamente homogénea de grado $m$, los cual son menores que uno, y que
+\begin{equation}
+\frac{\partial H^{i}}{\partial X_{j}}\equiv\frac{\partial F^{i}}{\partial X_{j}}\geq0\quad\text{para }j\neq i.
+\end{equation}
+Aquí, no necesitamos asumir que \[ \frac{\partial H^{i}}{\partial X_{i}}\equiv\frac{\partial F^{i}}{\partial X_{2}}-\delta_{i}>0,\quad\left(i=1,\ldots,n\right). \] y la indescomposibilidad de la matriz $H^{i}_{j}$. Dado que el propósito principal es mostrar la estabilidad del sistema, \emph{asumiremos del conjunto de salida la existencia de la única y equilibrio estrictamente positivo} $\left(\overline{X}_{1},\ldots,\overline{X}_{n}\right)$. Esto es notado aquí que incluso si fueramos a suponer que $\partial H^{i}/\partial X_{i}>0$ para nuestro sistema, nuestro sistema podría no ser un caso especial de Muth y Suit. Asumimos la homogeneidad de $F^{i}$, pero no $H^{i}$. Es más, incluso si $\delta_{i}=0$ para todo $i$, nuestro sistema podría no ser un caso especial de ellos. Para tener asumido que el grado de homogeneidad en un sector puede ser diferente de aquellos en otros sectores. En el caso de Muth, ellos son todos iguales. En el caso de Suit, una  forma más general de homogeneidad es introducida, pero el grado de homogeniedad es el mismo en cada sector de producción. Ahora probaremos el siguiente teorema.
+\begin{theorem}
+	Bajo los supuestos de %TODO:
+	, el grado menor que uno de homogeneidad para todos los $F^{i}$'s y la existencia y unicidad y equilibrio positivo, la solución del sistema ecuación diferencial %TODO:
+	se aproxima al equiilibrio.
+\end{theorem}
+\begin{proof}
+	De %TODO:
+	\begin{equation}
+	\frac{\dot{X}_{i}}{X_{i}}=\frac{1}{X_{i}}F^{i}\left(X_{1},\ldots,X_{n}\right)-\delta_{i},\quad\left(i=1,\ldots,n\right).
+	\end{equation}
+	Ponga
+	\begin{equation}
+	\frac{1}{X_{i}}F^{i}\left(X_{1},\ldots,X_{n}\right)\equiv G^{i}\left(X_{1},\ldots,X_{n}\right),\quad\left(i=1,\ldots,n\right).
+	\end{equation}
+	Entonces, $G^{i}$ es homogénea de grado $m_{i}-1$ cuyo grado es negativo. Ponga
+	\begin{equation}
+	\log X_{i}=\xi_{i},\quad\left(i=1,\ldots,n\right).
+	\end{equation}
+	Entonces, \[ X_{i}=e^{\xi_{i}}\text{ y }\dot{X}_{i}/X_{i}=\dot{\xi}_{i},\quad\left(i=1,\ldots,n\right). \] De %TODO:
+	\[ \dot{\xi}_{i}=G^{i}\left(e^{\xi_{1}},\ldots,e^{\xi_{n}}\right)-\delta_{i},\quad\left(i=1,\ldots,n\right). \] Ponga
+	\begin{equation}
+	G^{i}\left(e^{\xi_{1}},\ldots,e^{\xi_{n}}\right)-\delta_{i}\equiv g^{i}\left(\xi_{1},\ldots,\xi_{n}\right),\quad\left(i=1,\ldots,n\right).
+	\end{equation}
+	Entonces,
+	\begin{equation}
+	\dot{\xi}_{i}=g^{i}\left(\xi_{1},\ldots,\xi_{n}\right),\quad\left(i=1,\ldots,n\right).
+	\end{equation}
+	Ahora, $G^{i}\left(X_{1},\ldots,X_{n}\right)$ es homogénea de grado $m_{i}-1$. Así, \[ \left(m_{i}-1\right)G^{i}=\sum_{j=1}^{n}\frac{\partial G^{i}}{\partial X_{j}}X_{j},\quad\left(i=1,\ldots,n\right). \] Dado que $m_{i}-1<0$ para todo $i$, obtenemos
+	\begin{equation}
+	\sum_{j=1}^{n}\frac{\partial G^{i}}{\partial X_{j}}X_{j}<0\quad\text{para todo }i.
+	\end{equation}
+	Ahora calculamos $\partial g^{i}/\partial\xi_{j}$. De %TODO:
+	\begin{equation}
+	\frac{\partial g^{i}}{\partial\xi_{j}}=\frac{\partial G^{i}}{\partial X_{j}}\frac{\partial X_{j}}{\partial\xi_{j}}=\frac{\partial G^{i}}{\partial X_{j}}X_{j}.
+	\end{equation}
+	Asumimos que \[ \frac{\partial F^{i}}{\partial X_{j}}\geq0\quad\text{para }j\neq i. \] Entonces, de %TODO:
+	\begin{equation}
+	\frac{\partial G^{i}}{\partial X_{j}}=\frac{\partial}{\partial X_{j}}\left(\frac{1}{X_{i}}F^{i}\right)=\frac{1}{X_{i}}\frac{\partial F^{i}}{\partial X_{j}}\geq0\quad\text{para }j\neq i.
+	\end{equation}
+	Por lo tanto, de %TODO:
+	\begin{equation}
+	\frac{\partial g^{i}}{\partial\xi_{j}}\geq0\quad\text{para }j\neq i.
+	\end{equation}
+	De %TODO:
+	\begin{equation}
+	\frac{\partial G^{i}}{\partial X_{i}}X_{i}<-\sum_{j\neq i}\dfrac{\partial G^{i}}{\partial X_{j}}X_{j}\leq 0.
+	\end{equation}
+	Enotonces, de %TODO:
+	\begin{equation}
+	\frac{\partial g^{i}}{\partial \xi_{i}}<0.
+	\end{equation}
+	De %TODO
+	, tenemos
+	\begin{equation}
+	\left|\frac{\partial g^{i}}{\partial\xi_{i}}\right|>\sum_{j\neq i}^{i}\left|\frac{\partial g^{i}}{\partial\xi_{j}}\right|\quad\text{para todo } i.
+	\end{equation}
+	Las relaciones %TODO:
+	son suficientes para la estabilidad del sistema %TODO:
+	y en consecuencia, el sistema %TODO:
+	Las relaciones %TODO:
+	son conocidas como la condición de la diagonal dominantes, y la estabilidad del sistema satsifaciendo esto es mostrado por Arrow, BLock and Hurwicz. %TODO:
+	En la parte superior, asumimos la homogeneidad de las funciones $F^{i}\left(X_{1},\ldots,X_{n}\right)$, $\left(i=1,\ldots,n\right)$. Pero tal suposición no es necesariamente para la estabilidad. Si podemos obtener la relación %TODO.
+	la estabilidad es obtenida también. Considere el siguiente conjunto de alternativas. Asuma que las cantidades de recursos naturales (incluso la fuerza laboral) son dadas. Sean ellos $Z_{1},\ldots,Z_{m}$. Asuma que las funciones de producciones %TODO Gross
+	\[ F^{i}\left(X_{1},\ldots,X_{n},Z_{1},\ldots,Z_{m}\right),\quad\left(i=1,\ldots,n\right). \] Asuma que todos los $F^{i}$ son positivamente homogéneas de grado uno en $X_{1},\ldots,X_{n},Z_{1},\ldots,Z_{m}$. Cuando tomamos en la cuenta todos los tipos de factores de producción, el supuesto del primer grado de homogeneidad es natural. Ahora $G^{i}$ es definida en la misma manera como %TODO:
+	así que $G^{i}$ es homogénea de grado cero en $X_{1},\ldots,X_{n},Z_{1},\ldots,Z_{n}$. Esto es, \[ \sum_{j=1}^{n}\dfrac{\partial G^{i}}{\partial X_{j}}+\sum_{k=1}^{m}\frac{\partial G^{i}}{\partial Z_{k}}Z_{k}=0,\quad\left(i=1,\ldots,n\right). \] Asumiendo que \[ \frac{\partial G^{i}}{\partial Z_{k}}\geq0\text{para cada }i\text{ y }k, \] y que \[ \dfrac{\partial G^{i}}{\partial Z_{k}}>0\quad\text{para al emnos un } k=k_{i},\left(i=1,\ldots,n\right). \] obtenemos \[ \sum_{j=1}^{n}\frac{\partial G^{i}}{\partial X_{j}}X_{j}<0,\quad\left(i=1,\ldots,n\right). \] Esto es suficiente para la estabilidad del siguiente sistema, \[ \dot{X}_{i}=F^{i}\left(X_{1},\ldots,X_{n},Z_{1},\ldots,Z_{m}\right)\quad\left(i=1,\ldots,n\right). \]
+	
+\end{proof}

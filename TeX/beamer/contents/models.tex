@@ -1,0 +1,71 @@
+\section{Crecimiento económico}
+
+\subsection{Modelo de Solow}
+
+\begin{frame}[t]
+\frametitle{\subsecname}
+
+\begin{example}
+Sea $X=X\left(t\right)$ que denota el producto nacional, $K=K\left(t\right)$ el capital disponible y $L=L\left(t\right)$ el número de trabajadores en un país en el tiempo $t$. Suponga que, para todo $t\geq0$,
+\begin{multicols}{3}
+	\begin{enumerate}
+		\item $X=\sqrt{K}\sqrt{L}$.\label{eq:a}
+		\item $\dot{K}=0.4X$.\label{eq:b}
+		\item $L=e^{0.04t}$.\label{eq:c}
+	\end{enumerate}
+\end{multicols}
+Derive de estas ecuaciones a una sola ecuación diferencial para $K=K\left(t\right)$, y encuentre la solución de la ecuación cuando $K\left(0\right)=10000$.
+\end{example}
+\begin{solutions}
+De las ecuaciones~\ref{eq:a}--\ref{eq:c}, derivamos la única ecuación diferencial \[ \dot{K}=\frac{\mathrm{d}K}{\mathrm{d}t}=0.4\sqrt{K}\sqrt{L}=0.4e^{0.02t}\sqrt{K}. \]
+\end{solutions}
+\end{frame}
+
+\begin{frame}
+\frametitle{\subsecname}
+\begin{solutions}[\solutionname\ (Cont.)]
+Esto es claramente separable. Usando este método resultas las siguientes ecuaciones.
+\begin{multicols}{3}
+\begin{enumerate}
+	\item $\frac{1}{\sqrt{K}}\mathrm{d}K=0.4e^{0.02t}\mathrm{d}t$,
+	\item $\int\frac{1}{\sqrt{K}}\mathrm{d}K=\int0.04e^{0.02t}\mathrm{d}t$,
+	\item $2\sqrt{K}=20e^{0.02t}+C$.
+\end{enumerate}
+\end{multicols}
+Si $K=10000$ para $t=0$, entonces $2\sqrt{10000}=20+C$, así $C=180$. Entonces $\sqrt{K}=10e^{0.02t}+90$, y así la solución requerida es \[ K\left(t\right)=\left(10e^{0.02t}+90\right)^{2}=100\left(e^{0.02t}+9\right)^{2}. \] La relación capital--trabajo tiene un valor límite algo extraño en este modelo: cuando $t\to\infty$, así \[ \frac{K\left(t\right)}{L\left(t\right)}=100\times\frac{{\left(e^{0.02t}+9\right)}^{2}}{e^{0.04t}}=100{\left[\frac{e^{0.02t}+9}{e^{0.02t}}\right]}^{2}=100\left(1+9e^{-0.02t}\right)^{2}\rightarrow100. \]
+\end{solutions}
+\end{frame}
+
+\subsection{Modelo de Ramsey}
+
+\begin{frame}
+\frametitle{\subsecname}
+
+El modelo Ramsey comienza con una función de producción agregada que satisface las \emph{condiciones de Inada}.
+
+\
+
+\begin{definition}[Condiciones de Inada]
+Dada una función continuamente diferenciable $f\colon X\rightarrow Y$, donde $X=\left\{x:x\in\mathds{R}^{n}_{+}\right\}$ e $Y=\left\{y:y\in\mathds{R}_{+}\right\}$, las condiciones son:
+\begin{itemize}
+	\item el valor de la función $f\left(x\right)$ en $x=0$ es cero.
+	\item la función es \alert{cóncava} en $X$, es decir, la matriz Hessiana $H_{ij}=\left(\frac{\partial^{2}f}{\partial x_{i}\partial x_{j}}\right)$ necesariamente es semidefinida negativa. Económicamente esto implica que los rendimientos marginales para las entradas $x_{i}$ son positivas, es decir, $\partial f\left(x\right)/\partial x_{i}>0$, pero decreciente, es decir, $\partial^{2}f\left(x\right)/\partial x^{2}_{i}<0$.
+	\item El límite de la primera derivada positiva es infinitamente positiva cuando $x_{i}$ tiende a cero.
+	\item El límite de la primera derivada es cero cuando $x_{i}$ tiende al más infinito.
+\end{itemize}
+\end{definition}
+\end{frame}
+
+\begin{frame}
+\frametitle{\subsecname}
+\begin{definition}[Movimiento de la acumulación del capital]
+\begin{equation}
+\dot{k}=f\left(k\right)-\delta k-c.
+\end{equation}
+
+\begin{equation}
+U_{0}=\int_{0}^{\infty}e^{-\rho t}U\left(C\right)\mathrm{d}t.
+\end{equation}
+\end{definition}
+
+\end{frame}

@@ -1,0 +1,25 @@
+\begin{frame}\transblindsvertical
+	\frametitle{Referencias}
+	\only<1>{
+		\begin{itemize}
+			\item Libros
+			\nocite{*}
+			\setbeamertemplate{bibliography item}[book]
+			\printbibliography[heading=none,keyword=book]
+		\end{itemize}
+	}
+	\only<2>{
+		\begin{itemize}
+			\item Artículo matemático
+			\setbeamertemplate{bibliography item}[paper]
+			\printbibliography[heading=none,keyword=paper]
+		\end{itemize}
+	}
+	\only<2>{
+		\begin{itemize}
+			\item Sitio web
+			\setbeamertemplate{bibliography item}[online]
+			\printbibliography[heading=none,keyword=online]
+		\end{itemize}
+	}
+\end{frame}
