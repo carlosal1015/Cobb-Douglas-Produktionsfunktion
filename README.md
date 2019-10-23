@@ -1,0 +1,1 @@
+# Cobb-Douglas-Produktionsfunktion
