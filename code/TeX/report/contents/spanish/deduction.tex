@@ -1,0 +1,125 @@
+Las constantes $\alpha$ y $\beta$ tiene un significado económico de acuerdo a su valor.
+
+\begin{itemize}
+	\item $\alpha+\beta=1$: la función de producción tiene vueltas a escala constante (cambios en la salida subsecuente a un cambio proporcional en las entradas)
+	\item $\alpha+\beta<1$: la función de producción tiene vueltas a escala que disminuyen.
+	\item $\alpha+\beta>1$: la función de producción tiene vueltas a escala que aumentan.
+\end{itemize}
+
+\subsection{Deducción algebraica de la función de producción de Cobb-Douglas}
+
+Dentro de los supuestos básicos de la función de producción Cobb-Douglas, se tiene:
+\begin{itemize}
+	\item Si la mano de obra o capital se reduce, la prodicción también se reducen en la misma propducción.
+	\item La productividad marginal de la mano de obra es proporcional a la cantidad de producción por unidad de mano de obra.
+	\item La productividad marginal del capital es proporcional a la cantidad de producción por unidad de capital.
+\end{itemize}
+Con base a dichas suposiciones, se plantean las ecuaciones diferenciales relacionadas con este comportamiento:
+\begin{align}
+\frac{\partial P}{\partial L}
+&=\alpha\frac{P}{L}\label{eq:margL}\\
+\frac{\partial P}{\partial K}
+&=\beta\frac{P}{K}\label{eq:margK}
+\end{align}
+
+En relación a las ecuaciones~\eqref{eq:margL} y ~\eqref{eq:margK} se puede decir que:
+
+\begin{align}
+K\frac{\partial P}{\partial K}
+&=\beta P\label{eq:margLL}\\
+L\frac{\partial P}{\partial L}
+&=\alpha P\label{eq:margKK}
+\end{align}
+Sumando las ecuaciones~\eqref{eq:margLL} y ~\eqref{eq:margKK}, sería
+\begin{align}
+L\frac{\partial P}{\partial L}+K\frac{\partial P}{\partial K}
+&=\alpha P+\beta P\label{eq:margLLL}\\
+L\frac{\partial P}{\partial L}+K\frac{\partial P}{\partial K}
+&=\left(\alpha+\beta\right)P\label{eq:margKKK}
+\end{align}
+Haciendo $r=a+b$, entonces
+\begin{equation}
+L\frac{\partial P}{\partial L}+K\frac{\partial P}{\partial K}=rP
+\end{equation}
+La ecuación~\eqref{eq:margLL} es equivalente al teorema de Euler para funciones homogéneas, lo que indica que si $r=1$, entonces se tendrá una ecuación homogénea de grado $1$ y
+\begin{equation}
+L\frac{\partial P}{\partial L}+K\frac{\partial P}{\partial K}=P\left(L,K\right)
+\end{equation}
+La ecuación~\eqref{eq:margL} proporciona la productividad marginal de la mano de obra. Como esta ecuación es una ecuación diferencial ordinaria, la solución la hallamos separando variables e integrando. Así, obtenemos
+\begin{equation}
+\ln\left(P\right)+c_{1}=\alpha\ln\left(L\right)+g\left(K\right)+c_{2}.
+\end{equation}
+O equivalentemente,
+\begin{equation}
+\ln\left(P\right)=\alpha\ln\left(L\right)+g\left(K\right)+C
+\end{equation}
+\begin{equation}\label{eq:exp}
+P=e^{\ln\left(L\right)^{\alpha}}e^{g\left(K\right)}e^{C}
+\end{equation}
+Haciendo $A=e^{C}$ y $h\left(K\right)=e^{g\left(K\right)}$ la ecuación~\eqref{eq:exp} se transforma:
+\begin{equation}
+P=AL^{\alpha}h\left(k\right).
+\end{equation}
+Se sabe que:
+\begin{equation}
+\frac{\partial P}{\partial K}=\beta\frac{P}{K}
+\end{equation}
+Derivando parcialmente la función encontrada en el procedimiento anterior y reemplazando:
+\begin{equation}
+\frac{\partial P}{\partial K}=AL^{\alpha}h\left(K\right)
+\end{equation}
+\begin{equation}
+\beta\frac{P}{K}=AL^{\alpha}h\left(K\right)
+\end{equation}
+\begin{equation}
+\beta\frac{AL^{\alpha}h\left(K\right)}{K}=AL^{\alpha}h\left(K\right)
+\end{equation}
+La cual se convierte en una ecuación diferencial ordinaria:
+\begin{equation}\label{eq:ode}
+h^{\prime}\left(K\right)-\beta\frac{h\left(K\right)}{K}=0.
+\end{equation}
+La solución de esta ecuación diferencial es $h\left(K\right)=K^{\beta}$. Lo cual se verifica fácilmente, ya que al reemplazar en la ecuación anterior se obtiene una identidad. Luego,
+\begin{align}
+h\left(K\right)
+&=K^{\beta}\\
+h^{\prime}\left(K\right)
+&=\beta K^{\beta-1}
+\end{align}
+Reemplazando en la ecuación~\eqref{eq:ode}
+\begin{align*}
+\beta K^{\beta-1}-\frac{\beta K^{\beta}}{K}
+&=0\\
+\frac{\beta K^{\beta}}{K}
+&=\frac{\beta K^{\beta}}{K}
+\end{align*}
+Realizando la sustitución $y=h\left(K\right)$ se tiene $\frac{dy}{dK}=h^{\prime}\left(K\right)$.
+
+Reemplazando en la ecuación~\eqref{eq:ode}
+\begin{equation}
+\frac{dy}{dK}-\beta\frac{y}{K}=0
+\end{equation}
+Separando variables e integrando obtenemos,
+\begin{equation}
+\ln\left(y\right)+c_{1}=\beta\ln\left(K\right)+c_{2}
+\end{equation}
+\begin{align*}
+\ln\left(y\right)
+&=\beta\ln\left(K\right)+c\iff e^{\ln\left(y\right)}=e^{\left(\beta\ln\left(K\right)+c\right)}\iff y=e^{\left(\ln\left(K\right)^{\beta}+c\right)}\\
+y&=K^{\beta}e^{c}\iff y=cK^{\beta}\\
+h\left(K\right)&=cK^{\beta}
+\end{align*}
+Luego de encontrar $h\left(K\right)$, tenemos que \[ b=Ac,\quad P=bL^{\alpha}h\left(K\right)\iff P=bL^{\alpha}K^{\beta} \] Y dentro de la suposición de la función de producción se sabe que $\alpha+\beta=1$, por lo tanto
+\begin{equation}\label{eq:P}
+P=bL^{\alpha}K^{1-\alpha}
+\end{equation}
+\subsection{Regresión lineal de la función de Cobb-Douglas para un caso en particular}
+
+Para poder hallar los valores de $\alpha$, $\beta$ y $b$ se debe linealizar la función de producción.
+
+La ecuación~\eqref{eq:P} la podemos escribir como $\frac{P}{K}=bL^{\alpha}K^{-\alpha}$ de donde
+\begin{align*}
+\ln\left(\frac{P}{K}\right)
+&=\ln\left(b\left(\frac{L}{K}\right)^{\alpha}\right)\iff\ln\left(\frac{P}{K}\right)=\ln\left(b\right)+\ln\left(\frac{L}{K}\right)^{\alpha}\\
+\ln\left(\frac{P}{K}\right)
+&=\ln\left(\frac{P}{K}\right))=\ln\left(b\right)+\alpha\ln\left(\frac{L}{K}\right)
+\end{align*}
