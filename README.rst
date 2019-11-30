@@ -43,5 +43,5 @@ Git-Klon
 
     $ git clone https://github.com/carlosal1015/Cobb-Douglas-Produktionsfunktion.git
     $ cd Cobb-Douglas-Produktionsfunktion
-    $ pip install -r code/Python/requirements
+    $ pip install -r code/Python/requirements.txt
     $ pip env shell
