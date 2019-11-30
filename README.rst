@@ -1,3 +1,5 @@
+.. contents:: Inhaltsverzeichnis
+
 Cobb-Douglas Produktionsfunktion
 ================================
 
@@ -21,15 +23,12 @@ Gruppenmitglieder
 * Brayan Ayala
 * Kevin Huidobro
 
-Berater
-=======
-
-Meister Clifford Torres Ponce.
-
-    .. contents:: Inhaltsverzeichnis
-
-
-Herunterladen_.
+Erkenntlichkeit
 ===============
 
-.. _Herunterladen: https://github.com/carlosal1015/Finite-element-method-FEM/archive/master.zip/
+Wir danken unserem Meister Clifford Torres Ponce für die Antworten und das Follow-up bei dieser Untersuchung.
+
+
+Laden Sie das Projekt herunter_.
+
+.. _herunter: https://github.com/carlosal1015/Finite-element-method-FEM/archive/master.zip/
