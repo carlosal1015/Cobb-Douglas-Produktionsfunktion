@@ -1,6 +1,6 @@
 Inhaltsverzeichnis
 ==================
-.. contents::
+.. contents:: ⠀
 
 Cobb-Douglas Produktionsfunktion
 ================================
@@ -42,4 +42,6 @@ Git-Klon
 .. code-block:: bash
 
     $ git clone https://github.com/carlosal1015/Cobb-Douglas-Produktionsfunktion.git
-    $ pip install -r code/Python
+    $ cd Cobb-Douglas-Produktionsfunktion
+    $ pip install -r code/Python/requirements
+    $ pip env shell
