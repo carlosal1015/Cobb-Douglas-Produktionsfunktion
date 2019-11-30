@@ -1,13 +1,12 @@
-Cobb-Douglas-Produktionsfunktion
+Cobb-Douglas Produktionsfunktion
 ================================
 
-
-    .. image:: /img/cobb-douglas.jpg
-        :height: 100px
-        :width: 200 px
-        :scale: 50 %
-        :alt: alternate text
-        :align: right
+.. image:: /img/cobb-douglas.jpg
+    :height: 100px
+    :width: 200 px
+    :scale: 50 %
+    :alt: alternate text
+    :align: right
 
 Zusammenfassung
 ===============
