@@ -1,0 +1,10 @@
+=================================================================================================
+Coeficientes de regresión                [1.1687037615161289, 0.09780730277594096]
+Errores estándar                         [0.16932231828446775, 0.11723802655574904]
+t-statistic                              [6.902242854675917, 0.8342626163997363]
+Coeficiente de determinación             0.054819977618199456
+Coeficiente de determinación (ajustado)  -0.023945024246950553
+Prueba F                                 0.6959941131221332
+Estadístico de Durbin-Watson             1.314540695276015
+Test de Jarque-Bera                      3.2485704377525
+Número de condición de X^tX              0

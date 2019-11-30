@@ -1,4 +1,7 @@
-.. contents:: Inhaltsverzeichnis
+Inhaltsverzeichnis
+==================
+.. contents::
+    :local:
 
 Cobb-Douglas Produktionsfunktion
 ================================
@@ -32,3 +35,12 @@ Wir danken unserem Meister Clifford Torres Ponce für die Antworten und das Foll
 Laden Sie das Projekt herunter_.
 
 .. _herunter: https://github.com/carlosal1015/Finite-element-method-FEM/archive/master.zip/
+
+
+Git-Klon
+========
+
+.. code-block:: bash
+
+    $ git clone https://github.com/carlosal1015/Finite-element-method-FEM.git
+    $ git submodule update --init --recursive
