@@ -5,7 +5,7 @@
 \usepackage[spanish]{babel}
 \spanishdatedel
 %\usepackage[lite]{mtpro2}
-\usepackage{amsmath,mathrsfs,amsfonts,amsthm}
+\usepackage{amsmath,mathrsfs,amsfonts,amsthm,bm}
 %\usepackage{minted}
 %\setminted[python]{tabsize=2}
 \usepackage{pythontex}
@@ -26,6 +26,7 @@
 \usefonttheme[onlymath]{serif}
 
 \newcommand{\MVAt}{{\usefont{U}{mvs}{m}{n}\symbol{`@}}}
+\newtheorem{remark}{Observación}
 
 \makeatletter
 \newenvironment<>{proofs}[1][\proofname]{%

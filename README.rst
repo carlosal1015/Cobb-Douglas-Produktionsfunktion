@@ -1,7 +1,6 @@
 Inhaltsverzeichnis
 ==================
 .. contents::
-    :local:
 
 Cobb-Douglas Produktionsfunktion
 ================================
@@ -42,5 +41,5 @@ Git-Klon
 
 .. code-block:: bash
 
-    $ git clone https://github.com/carlosal1015/Finite-element-method-FEM.git
-    $ git submodule update --init --recursive
+    $ git clone https://github.com/carlosal1015/Cobb-Douglas-Produktionsfunktion.git
+    $ pip install -r code/Python
